@@ -1,0 +1,161 @@
+// Field Ledger — content data
+// To add new research: append an object to LEDGER_DATA.entries and (optionally)
+// a line to LEDGER_DATA.changelog. Nothing else in the site needs to change —
+// script.js reads this file and renders everything.
+
+window.LEDGER_DATA = {
+  categories: [
+    { id: "flagship", label: "Primary Sources", accent: "wheat" },
+    { id: "data",     label: "Data Sources",    accent: "ledger" },
+    { id: "global",   label: "Companies & Pilots", accent: "shoot" },
+    { id: "case",     label: "Worked Case Studies", accent: "wheat" },
+    { id: "africa",   label: "Africa & Nigeria", accent: "shoot" },
+    { id: "refi",     label: "ReFi & Carbon",   accent: "ledger" },
+    { id: "risk",     label: "Risks & Limits",  accent: "rust" },
+    { id: "academic", label: "Academic",        accent: "ledger" },
+    { id: "people",   label: "People & Orgs",   accent: "shoot" },
+    { id: "market",   label: "Market Sizing",   accent: "rust" },
+    { id: "idea",     label: "Content Ideas",   accent: "wheat" }
+  ],
+
+  entries: [
+    // ---------- FLAGSHIP ----------
+    {
+      id: "fao-brief-33",
+      category: "flagship",
+      title: "FAO Trade Policy Brief No. 33 (2019)",
+      tags: ["FAO", "trade facilitation", "primary source"],
+      body: "\u201cHow can blockchain\u2019s general architecture enhance trade facilitation in agricultural supply chains?\u201d by Mischa Tripoli and Josef Schmidhuber, FAO Trade and Markets Division. Citable stats: documenting a single trade transaction costs about 7% of the value of the goods traded (Global Alliance for Trade Facilitation); Australian grain payment terms run 2\u20135 weeks, exposing producers to counterparty risk; one DLT pilot cut mango traceability from 7 days to seconds.",
+      meta: "Source: FAO, 2019"
+    },
+    {
+      id: "fao-itu-volume",
+      category: "flagship",
+      title: "FAO/ITU \u201cE-Agriculture in Action: Blockchain for Agriculture\u201d (2019)",
+      tags: ["FAO", "ITU", "primary source", "case studies"],
+      body: "Full collection edited by Gerard Sylvester, with chapters on AgriDigital, AgUnity, WFP\u2019s Building Blocks, and the FARMS Kenya scheme, plus a 60+ entry annex of blockchain-for-social-good projects compiled by Stanford University. The single strongest anchor document in this whole project.",
+      meta: "Source: FAO & ITU, 2019 \u00b7 CC BY-NC-SA"
+    },
+
+    // ---------- DATA SOURCES ----------
+    { id: "faostat", category: "data", title: "FAOSTAT", tags: ["stats", "FAO"], body: "UN FAO production, trade, land-use, and food security data by country and crop.", meta: "faostat.fao.org" },
+    { id: "fao-knowledge-repo", category: "data", title: "FAO Knowledge Repository", tags: ["stats", "FAO"], body: "FAO\u2019s own open-access report profiling AgriDigital, AgUnity, and other pilots. Primary source, not a secondary blog.", meta: "openknowledge.fao.org" },
+    { id: "usda-nass", category: "data", title: "USDA NASS", tags: ["stats", "US"], body: "US National Agricultural Statistics Service \u2014 good for comparative Global North benchmarks.", meta: "nass.usda.gov" },
+    { id: "world-bank", category: "data", title: "World Bank Open Data", tags: ["stats", "global"], body: "Agriculture & Rural Development indicators, country-level.", meta: "data.worldbank.org" },
+    { id: "cgiar", category: "data", title: "CGIAR", tags: ["research network", "Global South"], body: "Consultative Group on International Agricultural Research \u2014 several centers publish on digital agriculture and blockchain pilots across the Global South.", meta: "cgiar.org" },
+    { id: "gsma-agritech", category: "data", title: "GSMA AgriTech", tags: ["mobile", "Africa", "Asia"], body: "Mobile-sector data on digital agriculture adoption in Africa and Asia, including blockchain-adjacent fintech-for-farmers work.", meta: "gsma.com" },
+    { id: "ictforag", category: "data", title: "ICTforAg / Digital Green", tags: ["Web3", "data sovereignty"], body: "Publishes on Web3 and farmer data sovereignty \u2014 the idea that smallholders should own and control their own farm data.", meta: "weforum.org" },
+
+    // ---------- GLOBAL COMPANIES & PILOTS ----------
+    { id: "agridigital-co", category: "global", title: "AgriDigital", tags: ["Australia", "grain", "payments"], body: "Blockchain-based grain trade and payment platform. See the worked case study below.", meta: "Australia" },
+    { id: "agunity-co", category: "global", title: "AgUnity", tags: ["Kenya", "PNG", "offline-first"], body: "Offline-capable smartphone app on blockchain for smallholder trust, planning, and trade. See the worked case study below.", meta: "Australia \u2192 Kenya, Bougainville" },
+    { id: "te-food", category: "global", title: "TE-FOOD", tags: ["traceability", "livestock"], body: "Farm-to-table traceability platform, widely cited for livestock and food traceability.", meta: "Global" },
+    { id: "ripeio", category: "global", title: "Ripe.io", tags: ["financing", "traceability"], body: "Blockchain-based agricultural financing, cited for cutting loan processing time.", meta: "Global" },
+    { id: "vechain", category: "global", title: "VeChain", tags: ["retail", "supply chain"], body: "Food retailer partnerships for supply-chain tracking.", meta: "Global" },
+    { id: "ibm-food-trust", category: "global", title: "IBM Food Trust", tags: ["enterprise", "traceability"], body: "Enterprise blockchain traceability platform, used by Walmart, Albertsons, and others.", meta: "Global" },
+    { id: "provenance-origintrail", category: "global", title: "Provenance / OriginTrail / Ambrosus", tags: ["provenance", "sensors"], body: "Supply-chain provenance and sensor-based tracking platforms.", meta: "Global" },
+    { id: "agrichain", category: "global", title: "AgriChain", tags: ["peer-to-peer"], body: "Peer-to-peer agricultural transaction platform that cuts out middlemen.", meta: "Australia" },
+    { id: "ethichub", category: "global", title: "EthicHub", tags: ["lending", "smallholders"], body: "Smart-contract lending connecting global lenders directly to smallholder farmers.", meta: "Mexico / global" },
+    { id: "skuchain", category: "global", title: "Skuchain", tags: ["RFID", "identifiers"], body: "Crypto-secured barcodes and RFID so individual stock-keeping units can attest digitally to their own origin across the supply chain.", meta: "Global" },
+    { id: "ambrosus", category: "global", title: "Ambrosus", tags: ["sensors", "pharma", "food"], body: "Sensor plus blockchain protocol verifying product quality, safety, and origin, spanning pharma and food.", meta: "Global" },
+    { id: "viant", category: "global", title: "Viant", tags: ["supply chain", "smart contracts"], body: "Blockchain platform for modeling supply-chain business processes and tracking assets via smart contracts.", meta: "Global" },
+    { id: "the-seam", category: "global", title: "The Seam \u00d7 IBM", tags: ["cotton", "consortium"], body: "Cotton-industry blockchain consortium backing a $7bn+ commodities trading platform. Owners include Cargill, Louis Dreyfus, and Olam.", meta: "US-based, global cotton trade" },
+    { id: "chromaway", category: "global", title: "ChromaWay", tags: ["land titles", "Sweden"], body: "Land-title registry pilot with Lantm\u00e4teriet, Sweden\u2019s land authority \u2014 a useful comparison case for the African land-documentation problem.", meta: "Sweden" },
+    { id: "factom", category: "global", title: "Factom", tags: ["land titles", "Honduras"], body: "Ran a 2015 land-title blockchain pilot with the Honduran government to fight registry fraud.", meta: "Honduras, 2015" },
+
+    // ---------- WORKED CASE STUDIES ----------
+    {
+      id: "case-agridigital",
+      category: "case",
+      title: "AgriDigital \u2014 the first blockchain grain sale",
+      tags: ["Australia", "grain", "payments", "smart contracts"],
+      body: "December 2016: grower David Whillock delivered 23.46 metric tons of wheat to Fletcher International Exports in Dubbo, Australia. Title transfer and payment triggered simultaneously via a smart contract on a private Ethereum instance \u2014 what AgriDigital describes as the world\u2019s first blockchain settlement of a physical commodity. Follow-on pilots: a 2017 run with CBH Group (Australia\u2019s largest grain exporter) at its Blue Lake Milling oats site, and a December 2017 proof-of-concept with Rabobank simulating three-party inventory finance settled in a bank-backed digital dollar. By early 2019 the platform had ~1,300 active grain supply-chain users and had processed 1.6M+ metric tons of grain.",
+      meta: "Source: FAO/ITU 2019, AgriDigital chapter (Bridie Ohlsson)"
+    },
+    {
+      id: "case-wfp",
+      category: "case",
+      title: "WFP \u201cBuilding Blocks\u201d \u2014 Jordan",
+      tags: ["humanitarian", "Jordan", "Syrian refugees", "cost savings"],
+      body: "WFP\u2019s Building Blocks pilot manages cash-based food assistance for Syrian refugees in Jordan, integrated with UNHCR\u2019s existing iris-scan biometric system \u2014 refugees pay with an eye scan, and blockchain only changes how the transaction is processed on the back end. Reported result: third-party financial service provider fees cut by roughly 98%, saving an estimated $150,000/month at full scale. Reached 100,000 refugees by early 2018, with a goal of covering all 500,000 refugees in Jordan.",
+      meta: "Source: FAO/ITU 2019, Building Blocks chapter (Julia Bacher, WFP Innovation Accelerator)"
+    },
+    {
+      id: "case-agunity",
+      category: "case",
+      title: "AgUnity \u2014 Kenya and Papua New Guinea",
+      tags: ["Kenya", "PNG", "smallholders", "literacy-friendly design"],
+      body: "A low-literacy-friendly smartphone app (large geometric shapes, minimal text) let smallholder farmers in Nanyuki, Kenya and Bougainville, PNG record transactions, plan crop pickups, and share equipment on a blockchain-backed ledger. Reported result: participating farmers roughly tripled their incomes in one season. In Kenya, the bottleneck was equipment access and poor seed-timing (3\u20136 bags of wheat/acre for smallholders vs 20\u201326 bags/acre for nearby commercial farms). In PNG, about half of harvested cacao was spoiling before collection due to poor farmer\u2013co-op coordination \u2014 the app\u2019s scheduling feature alone recovered most of that loss.",
+      meta: "Source: FAO/ITU 2019, AgUnity chapter (Angus Rama Keck)"
+    },
+    {
+      id: "case-farms",
+      category: "case",
+      title: "FARMS \u2014 a savings product, not an insurance sell (Kenya)",
+      tags: ["Kenya", "smallholder finance", "drought index", "savings"],
+      body: "Built by ICS (Dutch NGO), Agrics (agri-input company serving ~30,000 farmers across Kenya, Tanzania, Uganda), EARS (Dutch remote-sensing firm specializing in drought indices), and COIN22 (blockchain mobile-wallet fintech). Rather than sell full insurance \u2014 which smallholders often distrust and can\u2019t afford \u2014 FARMS lets farmers gradually save into a blockchain-based mobile wallet under a drought-index model; funds unlock automatically when satellite data confirms a bad season, and farmers graduate into overdraft/loan access as they build a savings history. A trust-building savings frame instead of a hard insurance pitch \u2014 a nuance most agri-Web3 content misses.",
+      meta: "Source: FAO/ITU 2019, FARMS chapter (Violanda de Man, ICS)"
+    },
+
+    // ---------- AFRICA & NIGERIA ----------
+    {
+      id: "cafs-solar-dryer",
+      category: "africa",
+      title: "CAFS Africa \u00d7 NSPRI \u2014 blockchain solar dryers (Nigeria)",
+      tags: ["Nigeria", "post-harvest loss", "UNDP", "fresh"],
+      body: "A UNDP Tadamon Accelerator-backed initiative combining blockchain with solar-powered food dryers to cut post-harvest losses across Nigeria. Founder: Azeez Salawu (Community Action for Food Security Africa). Fresh, local, verifiable, and almost nobody in Web3 content circles is covering it yet.",
+      meta: "Nigeria, 2026 \u00b7 launched by CAFS Africa + NSPRI"
+    },
+    { id: "ethereum-kenya-insurance", category: "africa", title: "Ethereum Foundation crop insurance \u2014 Kenya", tags: ["Kenya", "parametric insurance"], body: "Blockchain-based parametric crop insurance covering roughly 17,000 Kenyan farmers.", meta: "Kenya" },
+    { id: "houseafrica", category: "africa", title: "HouseAfrica", tags: ["land documentation", "satellite"], body: "African proptech using satellite data plus blockchain for land documentation \u2014 relevant background for why agri-blockchain finance struggles to scale (only ~10% of Sub-Saharan African land is formally documented).", meta: "Africa" },
+    { id: "cngn-refi-dao", category: "africa", title: "cNGN stablecoin / ReFi DAO Africa", tags: ["Nigeria", "land tokenization", "financial inclusion"], body: "Explores blockchain-backed land tokenization and farmer financial inclusion routed through a Naira-pegged stablecoin.", meta: "Nigeria" },
+    { id: "ng-gov-2026", category: "africa", title: "Nigerian government AI + blockchain push", tags: ["Nigeria", "policy", "2026"], body: "As of mid-2026 the Ministry of Agriculture and Food Security has publicly called for AI, blockchain, and smart-logistics adoption across African agriculture \u2014 a useful \u201cpolicy angle\u201d hook.", meta: "Nigeria, 2026" },
+    { id: "bitland-benben", category: "africa", title: "BitLand / BenBen (Ghana)", tags: ["Ghana", "land titles"], body: "Two independent Ghanaian startups using blockchain to manage land titles and resolve disputes, working with local land-title institutions. Good comparison case for the land-documentation angle.", meta: "Ghana" },
+
+    // ---------- REFI & CARBON ----------
+    { id: "gainforest", category: "refi", title: "GainForest", tags: ["Solana", "reforestation", "Indigenous communities"], body: "ReFi project paying Indigenous communities for forest stewardship and reforestation.", meta: "Built on Solana" },
+    { id: "sunrise-stake", category: "refi", title: "Sunrise Stake", tags: ["Solana", "staking"], body: "Staking protocol directing yield to climate-positive projects.", meta: "Built on Solana" },
+    { id: "regen-ecotoken", category: "refi", title: "Regen Network \u00d7 ecoToken", tags: ["cross-chain", "carbon credits"], body: "Cross-chain carbon and biodiversity credit retirement infrastructure.", meta: "Cross-chain" },
+    { id: "klima-toucan", category: "refi", title: "KlimaDAO / Toucan Protocol", tags: ["carbon credits", "tokenization"], body: "Tokenized carbon credits \u2014 the reference model most on-chain carbon markets are built against.", meta: "Multi-chain" },
+    { id: "hummingbird", category: "refi", title: "WEF \u201cProject Hummingbird\u201d", tags: ["Bayer", "big ag", "credit bundling"], body: "Bayer and PlanetaryX initiative bundling carbon storage, biodiversity, and soil health into single credit packages, with a stated 75%+ of funding going directly to farmers \u2014 a good example of \u201cbig ag\u201d entering the space.", meta: "World Economic Forum" },
+    { id: "solana-compass", category: "refi", title: "Solana Compass \u2014 RWA/Carbon Credits", tags: ["directory", "Solana"], body: "Running directory of live sustainability dApps on Solana \u2014 useful if you want a snapshot of one chain\u2019s ecosystem specifically.", meta: "solanacompass.com" },
+
+    // ---------- RISKS & LIMITS ----------
+    { id: "dhs-flowchart", category: "risk", title: "\u201cDo you even need a blockchain?\u201d", tags: ["DHS", "decision framework"], body: "The US Department of Homeland Security publishes a decision flowchart: no shared multi-party data store needed, no real historical-immutability requirement, or no genuine trust/control dispute over who runs the data \u2014 then a normal database is the right call, not blockchain. A genuinely useful on-screen visual for an episode that pushes back on blockchain-as-default.", meta: "US DHS decision framework" },
+    { id: "pow-energy", category: "risk", title: "Proof-of-work energy cost", tags: ["Bitcoin", "energy", "PoW vs PoS"], body: "Bitcoin-style proof-of-work can run roughly 275 kWh per transaction (Digiconomist\u2019s Bitcoin Energy Consumption Index) \u2014 worth contrasting with newer proof-of-stake designs.", meta: "Digiconomist" },
+    { id: "standards-immature", category: "risk", title: "Standards are still immature", tags: ["ISO", "ITU-T"], body: "No mature international standard governs DLT yet. ISO Technical Committee 307 and several ITU-T focus groups are actively working on this.", meta: "ISO / ITU-T" },
+    { id: "code-is-law", category: "risk", title: "Smart contracts aren\u2019t a substitute for law", tags: ["Ethereum", "hard fork", "governance"], body: "The 2016 Ethereum hard fork \u2014 after an exploit let a user withdraw roughly $50 million \u2014 is the canonical cautionary tale for why \u201ccode is law\u201d breaks down in real disputes. Especially relevant given the regulatory uncertainty in African markets.", meta: "Ethereum, 2016" },
+
+    // ---------- ACADEMIC ----------
+    { id: "sciencedirect-survey", category: "academic", title: "ScienceDirect \u2014 evaluation survey", tags: ["traceability", "adoption barriers"], body: "\u201cA survey on evaluation of blockchain-based agricultural traceability\u201d \u2014 barriers and adoption research, using the Australian grain supply chain as a case.", meta: "ScienceDirect" },
+    { id: "nature-rfid", category: "academic", title: "Nature Scientific Reports \u2014 blockchain + RFID", tags: ["traceability", "systems design"], body: "Peer-reviewed traceability system design papers combining blockchain and RFID.", meta: "Nature Scientific Reports" },
+    { id: "pmc-papers", category: "academic", title: "PMC / NCBI \u2014 traceability papers", tags: ["Ethereum", "peer-reviewed"], body: "Multiple peer-reviewed papers on blockchain agricultural traceability, including Ethereum-based and redactable-blockchain schemes.", meta: "PMC / NCBI" },
+    { id: "search-terms", category: "academic", title: "Search terms that keep surfacing fresh papers", tags: ["research tips"], body: "\u201cblockchain agricultural traceability,\u201d \u201cblockchain smallholder finance Africa,\u201d \u201cReFi regenerative agriculture tokenization.\u201d", meta: "Research tip" },
+
+    // ---------- PEOPLE & ORGS ----------
+    { id: "onigbinde", category: "people", title: "Oluseun Onigbinde", tags: ["BudgIT", "FUNAAB", "Nigeria"], body: "BudgIT co-founder who delivered a speech at FUNAAB \u2014 your own school \u2014 on AI, big data, and blockchain driving Nigeria\u2019s \u201cagriconomy.\u201d A genuinely rare overlap between your alma mater and your niche.", meta: "Nigeria" },
+    { id: "david-davies", category: "people", title: "David Davies", tags: ["AgUnity", "CEO"], body: "CEO of AgUnity, frequently interviewed on blockchain for smallholders.", meta: "AgUnity" },
+    { id: "kariithi", category: "people", title: "Victoria Kariithi", tags: ["regulation", "Kenya", "law"], body: "Blockchain lawyer (Mwanyumba Kariithi Consulting) who speaks on why unclear regulation is slowing agri-blockchain adoption across Kenya and Nigeria. Possible interview target.", meta: "Kenya" },
+    { id: "disruptor-daily", category: "people", title: "Disruptor Daily \u2014 Blockchain in Agriculture series", tags: ["interviews"], body: "A back-catalogue of operator interviews across this space. Good for mining talking points \u2014 attribute properly, always paraphrase.", meta: "Interview series" },
+    { id: "fao-itu-contacts", category: "people", title: "Named FAO/ITU contacts", tags: ["FAO", "ITU", "contacts"], body: "Gerard Sylvester \u2014 FAO, editor of the full \u201cBlockchain for Agriculture\u201d volume (Gerard.Sylvester@fao.org). Bridie Ohlsson \u2014 AgriDigital, Strategic Projects & Engagement. Julia Bacher \u2014 WFP Innovation Accelerator, Partnerships Manager. Angus Rama Keck \u2014 AgUnity, Chief of Staff. Violanda de Man \u2014 ICS, Portfolio Manager Agribusiness.", meta: "From your FAO/ITU library" },
+
+    // ---------- MARKET SIZING ----------
+    { id: "market-disagreement", category: "market", title: "Vendors disagree by 5x \u2014 and that\u2019s the story", tags: ["market size", "skepticism"], body: "Market-research firms currently size the global blockchain-in-agri-food-supply-chain market anywhere from ~$250M to ~$1.3B for 2025/26, projecting to $16B\u2013$27B by 2032\u201335 at 21\u201337% CAGR depending on methodology. Treat any single number as directional, not authoritative \u2014 GII Research, InsightAce, and MarketGrowthReports disagree by 5x, which is itself a lesson worth putting on camera about how immature and hyped this market still is.", meta: "GII Research / InsightAce / MarketGrowthReports" },
+
+    // ---------- CONTENT IDEAS ----------
+    { id: "idea-1", category: "idea", title: "What blockchain in agriculture actually solves", tags: ["episode idea"], body: "Trust, payment delay, and traceability \u2014 explained through AgriDigital or TE-FOOD as concrete cases, not hype.", meta: "Episode idea" },
+    { id: "idea-2", category: "idea", title: "Nigeria deep dive: the CAFS Africa solar-dryer project", tags: ["episode idea", "Nigeria"], body: "Fresh, local, verifiable, and almost nobody else in Web3 content is covering it yet.", meta: "Episode idea" },
+    { id: "idea-3", category: "idea", title: "Why land documentation is the real blocker", tags: ["episode idea", "Africa"], body: "Tie HouseAfrica and the ~10%-of-land-documented stat into why agri-blockchain finance struggles to scale in Africa.", meta: "Episode idea" },
+    { id: "idea-4", category: "idea", title: "ReFi explainer", tags: ["episode idea", "ReFi"], body: "GainForest, Regen Network, KlimaDAO, Project Hummingbird \u2014 how carbon and biodiversity credits actually work on-chain, across different ecosystems.", meta: "Episode idea" },
+    { id: "idea-5", category: "idea", title: "The hype vs. the data", tags: ["episode idea", "credibility"], body: "Use the 5x market-size disagreement as a lesson in reading crypto/agritech reports critically. Builds trust early in the series.", meta: "Episode idea" },
+    { id: "idea-6", category: "idea", title: "Smallholder finance angle", tags: ["episode idea", "smallholders"], body: "EthicHub, AgUnity, the Kenyan crop-insurance pilot \u2014 directly relevant to Nigerian smallholders your audience likely knows personally.", meta: "Episode idea" },
+    { id: "idea-7", category: "idea", title: "The first blockchain grain sale, told as a story", tags: ["episode idea", "narrative"], body: "AgriDigital and Fletcher International Exports: farmer delivers wheat, gets paid the instant title transfers, no five-week wait. Concrete, human, easy to visualize.", meta: "Episode idea" },
+    { id: "idea-8", category: "idea", title: "\u201cDo you even need a blockchain?\u201d", tags: ["episode idea", "credibility"], body: "Walk through the DHS decision flowchart on screen. Positions you as someone who understands the tech\u2019s real limits, not just its hype.", meta: "Episode idea" },
+    { id: "idea-9", category: "idea", title: "FARMS: savings, not insurance", tags: ["episode idea", "Kenya"], body: "Why a savings product beat an insurance product for smallholder trust and adoption in Kenya. Under-covered, nuanced angle.", meta: "Episode idea" },
+    { id: "idea-10", category: "idea", title: "WFP Jordan cost-savings breakdown", tags: ["episode idea", "humanitarian"], body: "Not agriculture exactly, but the mechanism \u2014 blockchain cutting out costly intermediaries \u2014 is identical to what agri-supply-chain projects promise, and the dollar figures are concrete and verifiable.", meta: "Episode idea" }
+  ],
+
+  changelog: [
+    { date: "2026-07-31", note: "First build. Ported the research base doc plus everything pulled from the two FAO/ITU PDFs (Trade Policy Brief No. 33 and the full \u201cBlockchain for Agriculture\u201d volume): worked case studies for AgriDigital, WFP Building Blocks, AgUnity, and FARMS Kenya, plus the DHS \u201cdo you need a blockchain\u201d framework." }
+  ]
+};
