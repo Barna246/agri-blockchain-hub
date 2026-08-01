@@ -103,9 +103,11 @@ window.LEDGER_DATA = {
       id: "cafs-solar-dryer",
       category: "africa",
       title: "CAFS Africa \u00d7 NSPRI \u2014 blockchain solar dryers (Nigeria)",
-      tags: ["Nigeria", "post-harvest loss", "UNDP", "fresh"],
-      body: "A UNDP Tadamon Accelerator-backed initiative combining blockchain with solar-powered food dryers to cut post-harvest losses across Nigeria. Founder: Azeez Salawu (Community Action for Food Security Africa). Fresh, local, verifiable, and almost nobody in Web3 content circles is covering it yet.",
-      meta: "Nigeria, 2026 \u00b7 launched by CAFS Africa + NSPRI"
+      tags: ["Nigeria", "post-harvest loss", "UNDP", "deep dive"],
+      body: "Officially \u201cIncorporation of Blockchain Technology to Access Climate-Smart Solar Dryers,\u201d unveiled 8 May 2026, backed by UNDP\u2019s Tadamon Accelerator for Food Security. NSPRI (a federal post-harvest research institute, HQ Ilorin) puts annual perishable-produce loss in Nigeria at 30-50% \u2014 falling hardest on smallholder farmers, women processors, and rural communities (Prof. Lateef Sanni, NSPRI Executive Director). The blockchain layer isn\u2019t a token or coin: it\u2019s a tamper-proof usage log for shared solar-dryer equipment, so community access stays fair and auditable rather than running on informal favoritism (Azeez Salawu, CAFS Africa founder; Dr. Michael Omodara, Project Training and Deployment Expert). Includes technician/digital-facilitator training for local youth. Gap: no public numbers yet on dryer count, farmers reached, or budget \u2014 this is a launch, not a track record.",
+      meta: "Nigeria, unveiled 8 May 2026 \u00b7 sources: Nigerian NewsDirect, CoinTrust",
+      link: "scripts/episode-2-cafs-solar-dryer-deepdive.md",
+      linkLabel: "Read Episode 2 script \u2192"
     },
     { id: "ethereum-kenya-insurance", category: "africa", title: "Ethereum Foundation crop insurance \u2014 Kenya", tags: ["Kenya", "parametric insurance"], body: "Blockchain-based parametric crop insurance covering roughly 17,000 Kenyan farmers.", meta: "Kenya" },
     { id: "houseafrica", category: "africa", title: "HouseAfrica", tags: ["land documentation", "satellite"], body: "African proptech using satellite data plus blockchain for land documentation \u2014 relevant background for why agri-blockchain finance struggles to scale (only ~10% of Sub-Saharan African land is formally documented).", meta: "Africa" },
@@ -154,6 +156,16 @@ window.LEDGER_DATA = {
       link: "scripts/episode-1-agriculture-blockchain-intro.md",
       linkLabel: "Read full script \u2192"
     },
+    {
+      id: "ep-2-cafs",
+      category: "scripts",
+      title: "Episode 2 (Deep Dive): The Blockchain Solar Dryer Project \u2014 Nigeria",
+      tags: ["episode", "script", "deep dive", "Nigeria"],
+      body: "First deep dive. Covers CAFS Africa x NSPRI's blockchain solar dryer project end to end: the 30-50% post-harvest loss problem, what the blockchain layer actually does (shared-equipment usage log, not a token), why blockchain vs. a plain database, the training/inclusion angle, and an honest \u201cwhat we don\u2019t know yet\u201d beat on missing scale numbers. Built from three named, on-record sources.",
+      meta: "~2:45-3:00 script (60 sec cut included) \u00b7 written July 31, 2026",
+      link: "scripts/episode-2-cafs-solar-dryer-deepdive.md",
+      linkLabel: "Read full script \u2192"
+    },
 
     // ---------- CONTENT IDEAS ----------
     { id: "idea-1", category: "idea", title: "What blockchain in agriculture actually solves", tags: ["episode idea"], body: "Trust, payment delay, and traceability \u2014 explained through AgriDigital or TE-FOOD as concrete cases, not hype.", meta: "Episode idea" },
@@ -173,6 +185,7 @@ window.LEDGER_DATA = {
     { date: "2026-07-31", note: "Added \u201cField sensors\u201d: a live data panel pulling crypto/carbon token prices (CoinGecko), ReFi protocol TVL (DefiLlama), agribusiness stock & ETF quotes (Stooq), and agtech headlines (AgFunderNews, AGDAILY), refreshed via a Vercel serverless function and edge-cached for 30 minutes." },
     { date: "2026-07-31", note: "Repainted the whole site in black/white/green. Fixed the stocks panel (Stooq needed a browser-style User-Agent header) and the TVL panel (now always shows all three tracked protocols instead of silently dropping ones that don\u2019t resolve). Added FAO\u2019s official newsroom feed and Modern Farmer alongside AgFunderNews and AGDAILY. Added a mobile quick-nav bar so category filters are reachable from anywhere on the page without scrolling. Added \u201cFresh script angles\u201d: three auto-generated hook/body/CTA scaffolds built from whatever headlines are live right now." },
     { date: "2026-07-31", note: "Removed the ReFi protocol TVL panel \u2014 it was the least reliable of the four sensors and added little on its own. Field sensors is now three panels: crypto & carbon tokens, agribusiness stocks & ETFs, and AgTech signals, plus the fresh script-angle generator." },
-    { date: "2026-07-31", note: "Added a \u201cScripts & Episodes\u201d category and a /scripts folder in the repo, so finished video scripts get logged and linked from the ledger as they\u2019re produced, not just researched. First entry: Episode 1, the agriculture x blockchain intro." }
+    { date: "2026-07-31", note: "Added a \u201cScripts & Episodes\u201d category and a /scripts folder in the repo, so finished video scripts get logged and linked from the ledger as they\u2019re produced, not just researched. First entry: Episode 1, the agriculture x blockchain intro." },
+    { date: "2026-07-31", note: "First deep dive: researched the CAFS Africa x NSPRI blockchain solar dryer project properly (three named on-record sources, not the one-line summary from earlier general search) and rewrote the Africa ledger entry with the real detail \u2014 the 30-50% post-harvest loss stat, what the blockchain layer actually does, and an honest note on what scale numbers aren\u2019t public yet. Logged as Episode 2." }
   ]
 };
