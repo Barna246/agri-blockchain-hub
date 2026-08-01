@@ -25,8 +25,6 @@ The site pulls four live feeds through one serverless function:
 
 - **Crypto & carbon tokens** — SOL, KLIMA, NCT, REGEN prices via CoinGecko's
   free public API (no key required).
-- **ReFi protocol TVL** — Toucan, KlimaDAO, Regen Network via DefiLlama's
-  free public API (no key required).
 - **Agribusiness stocks & ETFs** — Deere, ADM, Bunge, Corteva, Nutrien,
   Mosaic, plus agri-commodity ETFs (DBA, WEAT, CORN, SOYB) via Stooq's free
   quote endpoint (no key required).
@@ -41,11 +39,9 @@ window is what makes it "update per time" rather than genuinely per-request.
 **Honest caveat:** I built and syntax-checked this function, and confirmed
 each API endpoint is real and currently free/keyless via documentation —
 but my sandbox can't reach these external APIs directly, so I couldn't
-execute a live end-to-end test. The DefiLlama protocol slugs in particular
-are a best guess; if a panel shows "unavailable," it's designed to fail
-gracefully rather than break the page, and I can tune the exact slug or
-ticker once we see it live. Check the deployed site after each push and
-flag anything that looks off.
+execute a live end-to-end test before the first deploy. If a panel ever
+shows "unavailable," it's designed to fail gracefully rather than break
+the page. Flag anything that looks off after a deploy and I'll fix it.
 
 **If you later want a CoinGecko Demo API key** (raises the crypto panel's
 rate limit from ~10/min to 30/min — unnecessary at this traffic level, but

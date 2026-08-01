@@ -3,7 +3,6 @@
 
   var updatedEl = document.getElementById("sensorsUpdated");
   var cryptoEl = document.getElementById("sensorCrypto");
-  var tvlEl = document.getElementById("sensorTvl");
   var stocksEl = document.getElementById("sensorStocks");
   var newsEl = document.getElementById("sensorNews");
   var scriptsEl = document.getElementById("sensorScripts");
@@ -14,14 +13,6 @@
       minimumFractionDigits: decimals,
       maximumFractionDigits: decimals
     });
-  }
-
-  function fmtCompactUsd(n) {
-    if (n === null || n === undefined || isNaN(n)) return "\u2014";
-    if (n >= 1e9) return "$" + (n / 1e9).toFixed(2) + "B";
-    if (n >= 1e6) return "$" + (n / 1e6).toFixed(2) + "M";
-    if (n >= 1e3) return "$" + (n / 1e3).toFixed(1) + "K";
-    return "$" + n.toFixed(0);
   }
 
   function changeSpan(change) {
@@ -57,22 +48,6 @@
       );
     }).join("");
     cryptoEl.innerHTML = rows;
-  }
-
-  function renderTvl(list) {
-    if (!list || !list.length) return renderEmpty(tvlEl, "None of the tracked ReFi protocols currently resolve on DefiLlama.");
-    var rows = list.map(function (p) {
-      var value = p.tvlUsd === null || p.tvlUsd === undefined
-        ? '<span class="sensor-unavailable">not tracked</span>'
-        : fmtCompactUsd(p.tvlUsd);
-      return (
-        '<div class="sensor-row">' +
-          '<span class="sensor-row-label">' + p.label + "</span>" +
-          '<span class="sensor-row-value">' + value + "</span>" +
-        "</div>"
-      );
-    }).join("");
-    tvlEl.innerHTML = rows;
   }
 
   function renderStocks(list) {
@@ -159,7 +134,6 @@
       })
       .then(function (data) {
         renderCrypto(data.crypto);
-        renderTvl(data.tvl);
         renderStocks(data.stocks);
         renderNews(data.news);
         renderScripts(data.news);
@@ -168,7 +142,6 @@
       .catch(function () {
         updatedEl.textContent = "Sensors haven\u2019t connected yet \u2014 this panel only works once deployed on Vercel.";
         renderEmpty(cryptoEl, "Unavailable in this preview.");
-        renderEmpty(tvlEl, "Unavailable in this preview.");
         renderEmpty(stocksEl, "Unavailable in this preview.");
         renderEmpty(newsEl, "Unavailable in this preview.");
         renderEmpty(scriptsEl, "Unavailable in this preview.");

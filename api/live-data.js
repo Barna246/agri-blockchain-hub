@@ -16,12 +16,6 @@ const CRYPTO_IDS = [
   { id: "regen", label: "Regen Network (REGEN)" }
 ];
 
-const TVL_SLUGS = [
-  { slug: "toucan-protocol", label: "Toucan Protocol" },
-  { slug: "klimadao", label: "KlimaDAO" },
-  { slug: "regen-network", label: "Regen Network" }
-];
-
 const STOCK_TICKERS = [
   { sym: "DE.US", label: "Deere & Co" },
   { sym: "ADM.US", label: "Archer-Daniels-Midland" },
@@ -67,25 +61,6 @@ async function fetchCrypto() {
     priceUsd: data[c.id].usd,
     change24h: data[c.id].usd_24h_change
   }));
-}
-
-async function fetchTVL() {
-  const out = [];
-  for (const p of TVL_SLUGS) {
-    try {
-      const r = await withTimeout(fetch(`https://api.llama.fi/tvl/${p.slug}`), TIMEOUT_MS);
-      if (!r.ok) { out.push({ slug: p.slug, label: p.label, tvlUsd: null }); continue; }
-      const tvl = await r.json();
-      out.push({
-        slug: p.slug,
-        label: p.label,
-        tvlUsd: typeof tvl === "number" ? tvl : null
-      });
-    } catch (e) {
-      out.push({ slug: p.slug, label: p.label, tvlUsd: null });
-    }
-  }
-  return out;
 }
 
 async function fetchStocks() {
@@ -176,9 +151,8 @@ async function fetchNews() {
 }
 
 module.exports = async function handler(req, res) {
-  const [crypto, tvl, stocks, news] = await Promise.all([
+  const [crypto, stocks, news] = await Promise.all([
     fetchCrypto().catch(() => []),
-    fetchTVL().catch(() => []),
     fetchStocks().catch(() => []),
     fetchNews().catch(() => [])
   ]);
@@ -190,7 +164,6 @@ module.exports = async function handler(req, res) {
   res.status(200).json({
     updatedAt: new Date().toISOString(),
     crypto,
-    tvl,
     stocks,
     news
   });
