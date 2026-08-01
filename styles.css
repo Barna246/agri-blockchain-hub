@@ -236,6 +236,95 @@ input:focus-visible {
 }
 
 /* ---------------------------------------------------
+   Field sensors (live data)
+--------------------------------------------------- */
+.sensors-head h2 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 4px;
+}
+.sensors-sub { color: var(--parchment-600); font-size: 13px; margin: 0 0 8px; max-width: 68ch; }
+.sensors-updated {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--shoot-300);
+  margin: 0 0 18px;
+}
+
+.sensor-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 14px;
+}
+
+.sensor-panel {
+  background: var(--soil-900);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px 16px 14px;
+}
+.sensor-panel h3 {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--parchment-600);
+  margin: 0 0 12px;
+  font-weight: 500;
+}
+
+.sensor-body { display: flex; flex-direction: column; gap: 8px; min-height: 24px; }
+
+.sensor-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 12.5px;
+}
+.sensor-row-label { color: var(--parchment-300); }
+.sensor-row-value {
+  font-family: var(--font-mono);
+  color: var(--parchment-100);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sensor-change { font-size: 10.5px; font-family: var(--font-mono); }
+.chg-up { color: var(--shoot-300); }
+.chg-down { color: var(--rust-300); }
+
+.sensor-news-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--line);
+  color: var(--parchment-100);
+}
+.sensor-news-item:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.sensor-news-title { font-size: 12.5px; line-height: 1.4; text-decoration: none; }
+.sensor-news-item:hover .sensor-news-title { color: var(--wheat-300); text-decoration: underline; }
+.sensor-news-source {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--parchment-600);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.sensor-loading, .sensor-empty {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--parchment-600);
+  margin: 0;
+}
+
+/* ---------------------------------------------------
    Toolbar / chips
 --------------------------------------------------- */
 .toolbar {

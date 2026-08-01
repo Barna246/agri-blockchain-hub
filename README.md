@@ -14,6 +14,43 @@ into a browsable, searchable, filterable reference. Deploys to Vercel as-is.
   updates.
 - `research-notes.md` — the full research doc, linked as a download from the
   sidebar.
+- `api/live-data.js` — a Vercel Serverless Function that pulls live data on
+  a schedule (see "Field sensors" below).
+- `live.js` — fetches `/api/live-data` on page load and renders it into the
+  "Field sensors" panels.
+
+## Field sensors (live data)
+
+The site pulls four live feeds through one serverless function:
+
+- **Crypto & carbon tokens** — SOL, KLIMA, NCT, REGEN prices via CoinGecko's
+  free public API (no key required).
+- **ReFi protocol TVL** — Toucan, KlimaDAO, Regen Network via DefiLlama's
+  free public API (no key required).
+- **Agribusiness stocks & ETFs** — Deere, ADM, Bunge, Corteva, Nutrien,
+  Mosaic, plus agri-commodity ETFs (DBA, WEAT, CORN, SOYB) via Stooq's free
+  quote endpoint (no key required).
+- **AgTech headlines** — latest posts from AgFunderNews and AGDAILY via RSS.
+
+None of this needs an API key or a database. The function fetches fresh data
+when called, but the response is edge-cached by Vercel for 30 minutes
+(`stale-while-revalidate` for another hour), so visitors get a fast cached
+read and the underlying free APIs never see per-visitor traffic. That cache
+window is what makes it "update per time" rather than genuinely per-request.
+
+**Honest caveat:** I built and syntax-checked this function, and confirmed
+each API endpoint is real and currently free/keyless via documentation —
+but my sandbox can't reach these external APIs directly, so I couldn't
+execute a live end-to-end test. The DefiLlama protocol slugs in particular
+are a best guess; if a panel shows "unavailable," it's designed to fail
+gracefully rather than break the page, and I can tune the exact slug or
+ticker once we see it live. Check the deployed site after each push and
+flag anything that looks off.
+
+**If you later want a CoinGecko Demo API key** (raises the crypto panel's
+rate limit from ~10/min to 30/min — unnecessary at this traffic level, but
+free to add), set `COINGECKO_API_KEY` as an environment variable in the
+Vercel project settings. The function already checks for it automatically.
 
 ## Deploy to Vercel (pick one)
 

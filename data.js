@@ -156,6 +156,7 @@ window.LEDGER_DATA = {
   ],
 
   changelog: [
-    { date: "2026-07-31", note: "First build. Ported the research base doc plus everything pulled from the two FAO/ITU PDFs (Trade Policy Brief No. 33 and the full \u201cBlockchain for Agriculture\u201d volume): worked case studies for AgriDigital, WFP Building Blocks, AgUnity, and FARMS Kenya, plus the DHS \u201cdo you need a blockchain\u201d framework." }
+    { date: "2026-07-31", note: "First build. Ported the research base doc plus everything pulled from the two FAO/ITU PDFs (Trade Policy Brief No. 33 and the full \u201cBlockchain for Agriculture\u201d volume): worked case studies for AgriDigital, WFP Building Blocks, AgUnity, and FARMS Kenya, plus the DHS \u201cdo you need a blockchain\u201d framework." },
+    { date: "2026-07-31", note: "Added \u201cField sensors\u201d: a live data panel pulling crypto/carbon token prices (CoinGecko), ReFi protocol TVL (DefiLlama), agribusiness stock & ETF quotes (Stooq), and agtech headlines (AgFunderNews, AGDAILY), refreshed via a Vercel serverless function and edge-cached for 30 minutes." }
   ]
 };
