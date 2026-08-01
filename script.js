@@ -11,6 +11,7 @@
   var state = { category: "all", query: "" };
 
   var catnavEl = document.getElementById("catnav");
+  var mobilebarEl = document.getElementById("mobilebar");
   var chipsEl = document.getElementById("chips");
   var boardEl = document.getElementById("board");
   var resultCountEl = document.getElementById("resultCount");
@@ -59,9 +60,37 @@
         "<span>" + cat.label + "</span>" +
         '<span class="count">' + countFor(cat.id) + "</span>";
       btn.addEventListener("click", function () {
-        setCategory(cat.id);
+        setCategory(cat.id, true);
       });
       catnavEl.appendChild(btn);
+    });
+  }
+
+  /* ---------- Mobile quick-nav (always reachable, no scrolling needed) ---------- */
+  function renderMobileBar() {
+    mobilebarEl.innerHTML = "";
+    var all = document.createElement("button");
+    all.className = "mobilebar-item";
+    all.setAttribute("data-cat", "all");
+    all.textContent = "All";
+    all.addEventListener("click", function () { setCategory("all", true); });
+    mobilebarEl.appendChild(all);
+
+    categories.forEach(function (cat) {
+      var btn = document.createElement("button");
+      btn.className = "mobilebar-item";
+      btn.setAttribute("data-cat", cat.id);
+      btn.textContent = cat.label;
+      btn.addEventListener("click", function () { setCategory(cat.id, true); });
+      mobilebarEl.appendChild(btn);
+    });
+    syncMobileBarState();
+  }
+
+  function syncMobileBarState() {
+    var items = mobilebarEl.querySelectorAll(".mobilebar-item");
+    items.forEach(function (btn) {
+      btn.setAttribute("aria-selected", btn.getAttribute("data-cat") === state.category ? "true" : "false");
     });
   }
 
@@ -94,10 +123,15 @@
     });
   }
 
-  function setCategory(catId) {
+  function setCategory(catId, shouldScroll) {
     state.category = catId;
     syncChipState();
+    syncMobileBarState();
     render();
+    if (shouldScroll) {
+      var target = document.querySelector(".toolbar");
+      if (target) target.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   }
 
   /* ---------- Cards ---------- */
@@ -199,6 +233,7 @@
   }
 
   renderCatNav();
+  renderMobileBar();
   renderChips();
   renderStats();
   renderLog();

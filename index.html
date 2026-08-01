@@ -13,6 +13,8 @@
 </head>
 <body>
 
+<nav class="mobilebar" id="mobilebar" aria-label="Quick category jump"></nav>
+
 <div class="app">
 
   <aside class="sidebar">
@@ -76,6 +78,11 @@
         <article class="sensor-panel" data-panel="news">
           <h3>AgTech signals</h3>
           <div class="sensor-body" id="sensorNews"><p class="sensor-loading">Reading&hellip;</p></div>
+        </article>
+        <article class="sensor-panel sensor-panel--wide" data-panel="scripts">
+          <h3>Fresh script angles &mdash; auto-generated from today&rsquo;s headlines</h3>
+          <div class="sensor-body" id="sensorScripts"><p class="sensor-loading">Drafting&hellip;</p></div>
+          <p class="sensors-note">Starter scaffolds, not finished scripts &mdash; rewrite the hook in your own voice before recording. Want these AI-written instead of templated? Ask and I&rsquo;ll wire up a Claude-powered version.</p>
         </article>
       </div>
     </section>

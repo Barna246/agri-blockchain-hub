@@ -4,25 +4,25 @@
    + slate-ledger blue + clay-rust for caution
 --------------------------------------------------- */
 :root {
-  --soil-950: #15120D;
-  --soil-900: #1D1810;
-  --soil-850: #251F15;
-  --soil-800: #2C2519;
-  --line: rgba(241, 233, 216, 0.09);
-  --line-strong: rgba(241, 233, 216, 0.16);
+  --soil-950: #08090A;
+  --soil-900: #0F120E;
+  --soil-850: #161A12;
+  --soil-800: #1C2117;
+  --line: rgba(255, 255, 255, 0.09);
+  --line-strong: rgba(255, 255, 255, 0.18);
 
-  --wheat-500: #D9A441;
-  --wheat-300: #EAC97C;
-  --shoot-400: #7C9A6E;
-  --shoot-300: #9DB88E;
-  --ledger-400: #6E8B99;
-  --ledger-300: #8FADBA;
-  --rust-400: #B5674B;
-  --rust-300: #CB8367;
+  --wheat-500: #3ECF7E;   /* primary green — links, positive, active state */
+  --wheat-300: #8FE6B4;   /* lighter green — hover */
+  --shoot-400: #2F8F55;   /* deeper green — secondary accents, borders */
+  --shoot-300: #5CB57E;
+  --ledger-400: #C7D0C3;  /* soft white-green — neutral "data" tone */
+  --ledger-300: #EDF1EA;  /* near white */
+  --rust-400: #98A194;    /* muted neutral grey — caution / "down", no new hue */
+  --rust-300: #C3CABF;
 
-  --parchment-100: #F3ECDD;
-  --parchment-300: #CBC0A7;
-  --parchment-600: #8C8270;
+  --parchment-100: #F2F5EF;
+  --parchment-300: #AEB8A8;
+  --parchment-600: #6E7568;
 
   --font-display: "Fraunces", Georgia, serif;
   --font-body: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, sans-serif;
@@ -30,6 +30,7 @@
 
   --radius: 10px;
   --sidebar-w: 272px;
+  --mobilebar-h: 52px;
 }
 
 * { box-sizing: border-box; }
@@ -40,8 +41,8 @@ body {
   margin: 0;
   background: var(--soil-950);
   background-image:
-    radial-gradient(ellipse 900px 500px at 15% -10%, rgba(217,164,65,0.07), transparent 60%),
-    radial-gradient(ellipse 700px 500px at 100% 0%, rgba(110,139,153,0.06), transparent 55%);
+    radial-gradient(ellipse 900px 500px at 15% -10%, rgba(62,207,126,0.07), transparent 60%),
+    radial-gradient(ellipse 700px 500px at 100% 0%, rgba(199,208,195,0.05), transparent 55%);
   color: var(--parchment-100);
   font-family: var(--font-body);
   font-size: 15px;
@@ -49,8 +50,8 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-a { color: var(--wheat-300); text-decoration: none; }
-a:hover { text-decoration: underline; }
+a { color: var(--wheat-300); text-decoration: none; transition: color 0.15s ease; }
+a:hover { text-decoration: underline; color: var(--wheat-500); }
 a:focus-visible,
 button:focus-visible,
 input:focus-visible {
@@ -134,6 +135,7 @@ input:focus-visible {
   font-family: var(--font-body);
   width: 100%;
   text-align: left;
+  transition: background 0.15s ease, color 0.15s ease;
 }
 .catnav-item:hover { background: var(--soil-900); color: var(--parchment-100); }
 .catnav-item .dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
@@ -258,12 +260,6 @@ input:focus-visible {
   gap: 14px;
 }
 
-.sensor-panel {
-  background: var(--soil-900);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 16px 16px 14px;
-}
 .sensor-panel h3 {
   font-family: var(--font-mono);
   font-size: 11px;
@@ -294,8 +290,9 @@ input:focus-visible {
 }
 
 .sensor-change { font-size: 10.5px; font-family: var(--font-mono); }
-.chg-up { color: var(--shoot-300); }
-.chg-down { color: var(--rust-300); }
+.chg-up { color: var(--wheat-500); }
+.chg-down { color: var(--parchment-600); }
+.sensor-unavailable { color: var(--parchment-600); font-style: italic; font-size: 11.5px; }
 
 .sensor-news-item {
   display: flex;
@@ -325,6 +322,98 @@ input:focus-visible {
 }
 
 /* ---------------------------------------------------
+   Fresh script angles (auto-generated from live headlines)
+--------------------------------------------------- */
+.sensor-panel--wide { grid-column: 1 / -1; }
+
+.script-card {
+  border-top: 1px solid var(--line);
+  padding: 12px 0;
+}
+.script-card:first-child { border-top: none; padding-top: 0; }
+
+.script-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+.script-label {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--wheat-300);
+}
+.script-source {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  color: var(--parchment-600);
+}
+.script-headline {
+  font-family: var(--font-display);
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--parchment-100);
+  margin: 0 0 8px;
+}
+.script-row { display: flex; gap: 8px; font-size: 12.5px; margin-bottom: 5px; line-height: 1.5; }
+.script-row .k { font-family: var(--font-mono); font-size: 10px; text-transform: uppercase; color: var(--shoot-300); flex-shrink: 0; width: 44px; padding-top: 2px; }
+.script-row .v { color: var(--parchment-300); }
+
+.sensors-note {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--parchment-600);
+  margin: 14px 0 0;
+}
+.sensors-note a { color: var(--shoot-300); }
+
+/* ---------------------------------------------------
+   Mobile quick-nav — fixes "always have to scroll to reach it";
+   hidden on desktop where the sidebar is already always-visible
+--------------------------------------------------- */
+.mobilebar {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 40;
+  height: var(--mobilebar-h);
+  background: rgba(8, 9, 10, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line-strong);
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+.mobilebar::-webkit-scrollbar { display: none; }
+.mobilebar-item {
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  padding: 6px 11px;
+  border-radius: 999px;
+  border: 1px solid var(--line-strong);
+  background: var(--soil-900);
+  color: var(--parchment-300);
+}
+.mobilebar-item[aria-selected="true"] {
+  background: var(--wheat-500);
+  border-color: var(--wheat-500);
+  color: var(--soil-950);
+}
+
+#board, .toolbar { scroll-margin-top: calc(var(--mobilebar-h) + 14px); }
+
+@media (max-width: 900px) {
+  .mobilebar { display: flex; }
+  .app { padding-top: var(--mobilebar-h); }
+}
+
+/* ---------------------------------------------------
    Toolbar / chips
 --------------------------------------------------- */
 .toolbar {
@@ -346,6 +435,7 @@ input:focus-visible {
   background: var(--soil-900);
   color: var(--parchment-300);
   cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
 .chip:hover { border-color: var(--wheat-500); color: var(--parchment-100); }
 .chip[aria-selected="true"] {
@@ -373,8 +463,19 @@ input:focus-visible {
   display: flex;
   flex-direction: column;
   gap: 9px;
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  animation: cardIn 0.25s ease both;
 }
-.card:hover { border-color: var(--line-strong); }
+.card:hover {
+  transform: translateY(-2px);
+  border-color: var(--wheat-500);
+  box-shadow: 0 0 0 1px rgba(62, 207, 126, 0.15), 0 10px 26px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
 .card-eyebrow {
   display: flex;
@@ -453,12 +554,41 @@ input:focus-visible {
 [data-accent="wheat"]  .dot, .dot.wheat  { background: var(--wheat-500); }
 [data-accent="shoot"]  .dot, .dot.shoot  { background: var(--shoot-400); }
 [data-accent="ledger"] .dot, .dot.ledger { background: var(--ledger-400); }
-[data-accent="rust"]   .dot, .dot.rust   { background: var(--rust-400); }
+[data-accent="rust"]   .dot, .dot.rust   {
+  background: transparent;
+  border: 1.3px solid var(--rust-400);
+}
 
 [data-accent="wheat"]  h3 { color: var(--wheat-300); }
 [data-accent="shoot"]  h3 { color: var(--shoot-300); }
 [data-accent="ledger"] h3 { color: var(--ledger-300); }
-[data-accent="rust"]   h3 { color: var(--rust-300); }
+[data-accent="rust"]   h3 { color: var(--parchment-100); }
+
+.sensor-panel {
+  background: var(--soil-900);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px 16px 14px;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.sensor-panel:hover {
+  border-color: var(--shoot-400);
+  box-shadow: 0 0 0 1px rgba(62, 207, 126, 0.1);
+}
+
+.live-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--wheat-500);
+  margin-right: 6px;
+  animation: livePulse 1.8s ease-in-out infinite;
+}
+@keyframes livePulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(62, 207, 126, 0.5); }
+  50% { opacity: 0.6; box-shadow: 0 0 0 4px rgba(62, 207, 126, 0); }
+}
 
 /* ---------------------------------------------------
    Responsive

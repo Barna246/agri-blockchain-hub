@@ -36,8 +36,10 @@ const STOCK_TICKERS = [
 ];
 
 const NEWS_FEEDS = [
-  "https://agfundernews.com/feed",
-  "https://www.agdaily.com/feed/"
+  { url: "https://www.fao.org/feeds/fao-newsroom-rss", label: "fao.org" },
+  { url: "https://agfundernews.com/feed", label: "agfundernews.com" },
+  { url: "https://www.agdaily.com/feed/", label: "agdaily.com" },
+  { url: "https://modernfarmer.com/feed", label: "modernfarmer.com" }
 ];
 
 const TIMEOUT_MS = 8000;
@@ -72,11 +74,15 @@ async function fetchTVL() {
   for (const p of TVL_SLUGS) {
     try {
       const r = await withTimeout(fetch(`https://api.llama.fi/tvl/${p.slug}`), TIMEOUT_MS);
-      if (!r.ok) continue;
+      if (!r.ok) { out.push({ slug: p.slug, label: p.label, tvlUsd: null }); continue; }
       const tvl = await r.json();
-      if (typeof tvl === "number") out.push({ slug: p.slug, label: p.label, tvlUsd: tvl });
+      out.push({
+        slug: p.slug,
+        label: p.label,
+        tvlUsd: typeof tvl === "number" ? tvl : null
+      });
     } catch (e) {
-      // skip this one, keep going
+      out.push({ slug: p.slug, label: p.label, tvlUsd: null });
     }
   }
   return out;
@@ -85,26 +91,43 @@ async function fetchTVL() {
 async function fetchStocks() {
   const symbols = STOCK_TICKERS.map((t) => t.sym.toLowerCase()).join(",");
   const url = `https://stooq.com/q/l/?s=${symbols}&f=sd2t2ohlcv&h&e=csv`;
-  const r = await withTimeout(fetch(url), TIMEOUT_MS);
+  const r = await withTimeout(
+    fetch(url, {
+      headers: {
+        "User-Agent":
+          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36",
+        Accept: "text/csv,*/*"
+      }
+    }),
+    TIMEOUT_MS
+  );
   if (!r.ok) throw new Error("stooq " + r.status);
   const csv = (await r.text()).trim();
   const lines = csv.split("\n");
   if (lines.length < 2) return [];
   const header = lines[0].split(",").map((h) => h.trim());
-  return lines.slice(1).map((line) => {
+  const rows = lines.slice(1).map((line) => {
     const cols = line.split(",");
     const row = {};
-    header.forEach((h, i) => { row[h] = cols[i]; });
+    header.forEach((h, i) => { row[h] = (cols[i] || "").trim(); });
     const meta = STOCK_TICKERS.find(
       (t) => t.sym.toLowerCase() === String(row.Symbol || "").toLowerCase()
     );
+    const closeNum = row.Close && row.Close !== "N/D" ? Number(row.Close) : null;
     return {
       symbol: row.Symbol || "",
       label: meta ? meta.label : row.Symbol || "",
-      close: row.Close && row.Close !== "N/D" ? Number(row.Close) : null,
+      close: Number.isFinite(closeNum) ? closeNum : null,
       date: row.Date || ""
     };
-  }).filter((r) => r.close !== null);
+  });
+  // Keep every tracked ticker in the response, even if Stooq returned N/D for
+  // it, so the frontend can show "unavailable" per row instead of the whole
+  // panel silently going empty.
+  return STOCK_TICKERS.map((t) => {
+    const match = rows.find((r2) => r2.symbol.toLowerCase() === t.sym.toLowerCase());
+    return match || { symbol: t.sym, label: t.label, close: null, date: "" };
+  });
 }
 
 function parseRss(xml, source, limit) {
@@ -138,19 +161,18 @@ function decodeEntities(str) {
 
 async function fetchNews() {
   const all = [];
-  for (const feedUrl of NEWS_FEEDS) {
+  for (const feed of NEWS_FEEDS) {
     try {
-      const r = await withTimeout(fetch(feedUrl, { headers: { accept: "application/rss+xml, application/xml, text/xml" } }), TIMEOUT_MS);
+      const r = await withTimeout(fetch(feed.url, { headers: { accept: "application/rss+xml, application/xml, text/xml" } }), TIMEOUT_MS);
       if (!r.ok) continue;
       const xml = await r.text();
-      const source = new URL(feedUrl).hostname.replace("www.", "");
-      all.push(...parseRss(xml, source, 4));
+      all.push(...parseRss(xml, feed.label, 4));
     } catch (e) {
       // skip this feed, keep going
     }
   }
   all.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
-  return all.slice(0, 8);
+  return all.slice(0, 10);
 }
 
 module.exports = async function handler(req, res) {

@@ -157,6 +157,7 @@ window.LEDGER_DATA = {
 
   changelog: [
     { date: "2026-07-31", note: "First build. Ported the research base doc plus everything pulled from the two FAO/ITU PDFs (Trade Policy Brief No. 33 and the full \u201cBlockchain for Agriculture\u201d volume): worked case studies for AgriDigital, WFP Building Blocks, AgUnity, and FARMS Kenya, plus the DHS \u201cdo you need a blockchain\u201d framework." },
-    { date: "2026-07-31", note: "Added \u201cField sensors\u201d: a live data panel pulling crypto/carbon token prices (CoinGecko), ReFi protocol TVL (DefiLlama), agribusiness stock & ETF quotes (Stooq), and agtech headlines (AgFunderNews, AGDAILY), refreshed via a Vercel serverless function and edge-cached for 30 minutes." }
+    { date: "2026-07-31", note: "Added \u201cField sensors\u201d: a live data panel pulling crypto/carbon token prices (CoinGecko), ReFi protocol TVL (DefiLlama), agribusiness stock & ETF quotes (Stooq), and agtech headlines (AgFunderNews, AGDAILY), refreshed via a Vercel serverless function and edge-cached for 30 minutes." },
+    { date: "2026-07-31", note: "Repainted the whole site in black/white/green. Fixed the stocks panel (Stooq needed a browser-style User-Agent header) and the TVL panel (now always shows all three tracked protocols instead of silently dropping ones that don\u2019t resolve). Added FAO\u2019s official newsroom feed and Modern Farmer alongside AgFunderNews and AGDAILY. Added a mobile quick-nav bar so category filters are reachable from anywhere on the page without scrolling. Added \u201cFresh script angles\u201d: three auto-generated hook/body/CTA scaffolds built from whatever headlines are live right now." }
   ]
 };
