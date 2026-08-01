@@ -15,7 +15,8 @@ window.LEDGER_DATA = {
     { id: "academic", label: "Academic",        accent: "ledger" },
     { id: "people",   label: "People & Orgs",   accent: "shoot" },
     { id: "market",   label: "Market Sizing",   accent: "rust" },
-    { id: "idea",     label: "Content Ideas",   accent: "wheat" }
+    { id: "idea",     label: "Content Ideas",   accent: "wheat" },
+    { id: "scripts",  label: "Scripts & Episodes", accent: "shoot" }
   ],
 
   entries: [
@@ -142,6 +143,18 @@ window.LEDGER_DATA = {
     // ---------- MARKET SIZING ----------
     { id: "market-disagreement", category: "market", title: "Vendors disagree by 5x \u2014 and that\u2019s the story", tags: ["market size", "skepticism"], body: "Market-research firms currently size the global blockchain-in-agri-food-supply-chain market anywhere from ~$250M to ~$1.3B for 2025/26, projecting to $16B\u2013$27B by 2032\u201335 at 21\u201337% CAGR depending on methodology. Treat any single number as directional, not authoritative \u2014 GII Research, InsightAce, and MarketGrowthReports disagree by 5x, which is itself a lesson worth putting on camera about how immature and hyped this market still is.", meta: "GII Research / InsightAce / MarketGrowthReports" },
 
+    // ---------- SCRIPTS & EPISODES ----------
+    {
+      id: "ep-1-intro",
+      category: "scripts",
+      title: "Episode 1: Agriculture x Blockchain \u2014 What It Actually Is",
+      tags: ["episode", "script", "intro"],
+      body: "First substantive explainer for the series. Hook: the 2016 AgriDigital wheat settlement (paid the instant grain was weighed, no five-week wait). Middle: the 7% trade-documentation-cost stat and what blockchain actually fixes (paperwork/trust, not farming itself). Close: the <10%-of-African-land-documented stat, bridging into why this matters locally, then a series tease.",
+      meta: "~90 sec script (30 sec cut included) \u00b7 filmed July 31, 2026",
+      link: "scripts/episode-1-agriculture-blockchain-intro.md",
+      linkLabel: "Read full script \u2192"
+    },
+
     // ---------- CONTENT IDEAS ----------
     { id: "idea-1", category: "idea", title: "What blockchain in agriculture actually solves", tags: ["episode idea"], body: "Trust, payment delay, and traceability \u2014 explained through AgriDigital or TE-FOOD as concrete cases, not hype.", meta: "Episode idea" },
     { id: "idea-2", category: "idea", title: "Nigeria deep dive: the CAFS Africa solar-dryer project", tags: ["episode idea", "Nigeria"], body: "Fresh, local, verifiable, and almost nobody else in Web3 content is covering it yet.", meta: "Episode idea" },
@@ -159,6 +172,7 @@ window.LEDGER_DATA = {
     { date: "2026-07-31", note: "First build. Ported the research base doc plus everything pulled from the two FAO/ITU PDFs (Trade Policy Brief No. 33 and the full \u201cBlockchain for Agriculture\u201d volume): worked case studies for AgriDigital, WFP Building Blocks, AgUnity, and FARMS Kenya, plus the DHS \u201cdo you need a blockchain\u201d framework." },
     { date: "2026-07-31", note: "Added \u201cField sensors\u201d: a live data panel pulling crypto/carbon token prices (CoinGecko), ReFi protocol TVL (DefiLlama), agribusiness stock & ETF quotes (Stooq), and agtech headlines (AgFunderNews, AGDAILY), refreshed via a Vercel serverless function and edge-cached for 30 minutes." },
     { date: "2026-07-31", note: "Repainted the whole site in black/white/green. Fixed the stocks panel (Stooq needed a browser-style User-Agent header) and the TVL panel (now always shows all three tracked protocols instead of silently dropping ones that don\u2019t resolve). Added FAO\u2019s official newsroom feed and Modern Farmer alongside AgFunderNews and AGDAILY. Added a mobile quick-nav bar so category filters are reachable from anywhere on the page without scrolling. Added \u201cFresh script angles\u201d: three auto-generated hook/body/CTA scaffolds built from whatever headlines are live right now." },
-    { date: "2026-07-31", note: "Removed the ReFi protocol TVL panel \u2014 it was the least reliable of the four sensors and added little on its own. Field sensors is now three panels: crypto & carbon tokens, agribusiness stocks & ETFs, and AgTech signals, plus the fresh script-angle generator." }
+    { date: "2026-07-31", note: "Removed the ReFi protocol TVL panel \u2014 it was the least reliable of the four sensors and added little on its own. Field sensors is now three panels: crypto & carbon tokens, agribusiness stocks & ETFs, and AgTech signals, plus the fresh script-angle generator." },
+    { date: "2026-07-31", note: "Added a \u201cScripts & Episodes\u201d category and a /scripts folder in the repo, so finished video scripts get logged and linked from the ledger as they\u2019re produced, not just researched. First entry: Episode 1, the agriculture x blockchain intro." }
   ]
 };

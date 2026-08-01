@@ -14,6 +14,10 @@ into a browsable, searchable, filterable reference. Deploys to Vercel as-is.
   updates.
 - `research-notes.md` — the full research doc, linked as a download from the
   sidebar.
+- `scripts/` — finished video scripts, one file per episode. Each one gets
+  a matching entry in `data.js` under the "scripts" category, with a `link`
+  field pointing at the file. This is the log Sir Barna asked for: every
+  produced script lives here, filterable and linked from the ledger.
 - `api/live-data.js` — a Vercel Serverless Function that pulls live data on
   a schedule (see "Field sensors" below).
 - `live.js` — fetches `/api/live-data` on page load and renders it into the

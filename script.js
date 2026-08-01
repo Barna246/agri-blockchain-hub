@@ -175,6 +175,16 @@
         card.appendChild(meta);
       }
 
+      if (entry.link) {
+        var linkEl = document.createElement("a");
+        linkEl.className = "card-link";
+        linkEl.href = entry.link;
+        linkEl.target = "_blank";
+        linkEl.rel = "noopener noreferrer";
+        linkEl.textContent = entry.linkLabel || "Open \u2192";
+        card.appendChild(linkEl);
+      }
+
       boardEl.appendChild(card);
     });
 
