@@ -20,6 +20,9 @@
   var logListEl = document.getElementById("logList");
   var seamTopEl = document.getElementById("seamTop");
   var searchInput = document.getElementById("searchInput");
+  var modalOverlay = document.getElementById("episodeModal");
+  var modalContent = document.getElementById("modalContent");
+  var modalClose = document.getElementById("modalClose");
 
   function categoryById(id) {
     for (var i = 0; i < categories.length; i++) {
@@ -150,6 +153,11 @@
 
     boardEl.innerHTML = "";
     filtered.forEach(function (entry) {
+      if (entry.category === "scripts" && entry.segments) {
+        boardEl.appendChild(buildEpisodeCard(entry));
+        return;
+      }
+
       var cat = categoryById(entry.category);
       var card = document.createElement("article");
       card.className = "card";
@@ -192,6 +200,104 @@
     emptyStateEl.hidden = filtered.length !== 0;
     boardEl.hidden = filtered.length === 0;
   }
+
+  /* ---------- Episode cards + reader modal ---------- */
+  function buildEpisodeCard(entry) {
+    var card = document.createElement("article");
+    card.className = "ep-card";
+    card.setAttribute("tabindex", "0");
+    card.setAttribute("role", "button");
+    card.setAttribute("aria-label", "Read " + entry.title);
+
+    var num = document.createElement("div");
+    num.className = "ep-number";
+    num.innerHTML = String(entry.episodeNumber || "\u2014").padStart(2, "0") + "<span>Episode</span>";
+    card.appendChild(num);
+
+    var main = document.createElement("div");
+    main.className = "ep-main";
+    var h3 = document.createElement("h3");
+    h3.textContent = entry.title;
+    var hook = document.createElement("p");
+    hook.className = "ep-hook";
+    hook.textContent = "\u201c" + entry.hook + "\u201d";
+    var metaRow = document.createElement("div");
+    metaRow.className = "ep-meta-row";
+    metaRow.innerHTML =
+      (entry.status ? '<span class="ep-status">' + entry.status + "</span>" : "") +
+      (entry.duration ? '<span class="ep-duration">' + entry.duration + "</span>" : "") +
+      (entry.dateLabel ? '<span class="ep-date">' + entry.dateLabel + "</span>" : "");
+    main.appendChild(h3);
+    main.appendChild(hook);
+    main.appendChild(metaRow);
+    card.appendChild(main);
+
+    var action = document.createElement("span");
+    action.className = "ep-action";
+    action.textContent = "Read script \u2192";
+    card.appendChild(action);
+
+    function open() { openEpisodeModal(entry); }
+    card.addEventListener("click", open);
+    card.addEventListener("keydown", function (e) {
+      if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(); }
+    });
+
+    return card;
+  }
+
+  function openEpisodeModal(entry) {
+    var html = "";
+    html += '<p class="modal-eyebrow">Episode ' + String(entry.episodeNumber || "").padStart(2, "0") + "</p>";
+    html += "<h2 id=\"modalTitle\">" + entry.title + "</h2>";
+    html += '<div class="modal-meta">' +
+      (entry.status ? "<span>" + entry.status + "</span>" : "") +
+      (entry.duration ? "<span>" + entry.duration + "</span>" : "") +
+      (entry.dateLabel ? "<span>" + entry.dateLabel + "</span>" : "") +
+      "</div>";
+
+    (entry.segments || []).forEach(function (seg) {
+      html += '<div class="modal-segment"><div class="modal-seg-head"><span class="lbl">' + seg.label + '</span><span class="t">' + seg.time + "</span></div><p>" + seg.text + "</p></div>";
+    });
+
+    if (entry.altCut) {
+      html += '<div class="modal-block"><h4>' + entry.altCut.label + "</h4><p>" + entry.altCut.text + "</p></div>";
+    }
+
+    if (entry.overlays && entry.overlays.length) {
+      html += '<div class="modal-block"><h4>On-screen text overlays</h4><ul class="modal-overlay-list">';
+      entry.overlays.forEach(function (ov) {
+        html += "<li><b>" + ov.time + "</b> \u2014 " + ov.text + "</li>";
+      });
+      html += "</ul></div>";
+    }
+
+    if (entry.sourcesNote) {
+      html += '<p class="modal-sources">Sources: ' + entry.sourcesNote + "</p>";
+    }
+
+    if (entry.link) {
+      html += '<a class="modal-rawlink" href="' + entry.link + '" target="_blank" rel="noopener noreferrer">' + (entry.linkLabel || "Raw .md \u2192") + "</a>";
+    }
+
+    modalContent.innerHTML = html;
+    modalOverlay.hidden = false;
+    document.body.style.overflow = "hidden";
+    modalClose.focus();
+  }
+
+  function closeEpisodeModal() {
+    modalOverlay.hidden = true;
+    document.body.style.overflow = "";
+  }
+
+  modalClose.addEventListener("click", closeEpisodeModal);
+  modalOverlay.addEventListener("click", function (e) {
+    if (e.target === modalOverlay) closeEpisodeModal();
+  });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && !modalOverlay.hidden) closeEpisodeModal();
+  });
 
   /* ---------- Stats ---------- */
   function renderStats() {

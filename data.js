@@ -149,22 +149,69 @@ window.LEDGER_DATA = {
     {
       id: "ep-1-intro",
       category: "scripts",
-      title: "Episode 1: Agriculture x Blockchain \u2014 What It Actually Is",
+      title: "Agriculture x Blockchain \u2014 What It Actually Is",
       tags: ["episode", "script", "intro"],
-      body: "First substantive explainer for the series. Hook: the 2016 AgriDigital wheat settlement (paid the instant grain was weighed, no five-week wait). Middle: the 7% trade-documentation-cost stat and what blockchain actually fixes (paperwork/trust, not farming itself). Close: the <10%-of-African-land-documented stat, bridging into why this matters locally, then a series tease.",
-      meta: "~90 sec script (30 sec cut included) \u00b7 filmed July 31, 2026",
+      episodeNumber: 1,
+      status: "Published",
+      duration: "~90 sec",
+      dateLabel: "Filmed July 31, 2026",
+      hook: "In December 2016, a farmer in Australia delivered a truck of wheat \u2014 and got paid the second it hit the scale. No bank. No invoice. No two-week wait.",
+      body: "First substantive explainer for the series: what blockchain actually fixes in agriculture (paperwork and trust, not farming itself), told through the AgriDigital wheat story and the 7% trade-documentation-cost stat.",
+      segments: [
+        { label: "Hook", time: "0:00\u20130:08", text: "In December 2016, a farmer in Australia delivered a truck of wheat \u2014 and got paid the second it hit the scale. No bank. No invoice. No two-week wait. That's blockchain in agriculture. And for the next few weeks, I'm breaking down exactly what that means \u2014 especially for us." },
+        { label: "What it is", time: "0:08\u20130:32", text: "Here's the boring truth first: documenting a single trade transaction can cost about 7% of the value of the goods being traded. That's before anything even ships. Blockchain doesn't fix farming. It fixes the paperwork, the trust, and the waiting around farming \u2014 payments, land records, proof your rice is actually organic, proof a cooperative didn't shortchange you." },
+        { label: "The example", time: "0:32\u20130:52", text: "That wheat farmer I mentioned \u2014 a company called AgriDigital ran the whole trade on a blockchain. The moment his grain was weighed, a smart contract paid him instantly. Normal payment terms in that industry run two to five weeks. That's not a crypto pitch. That's just... faster paperwork." },
+        { label: "Why it matters here", time: "0:52\u20131:15", text: "Now bring that home. Less than 10% of land in Sub-Saharan Africa is even formally documented. Smallholder farmers lose value to middlemen, bad records, and cooperatives they can't fully verify. That's the actual problem blockchain is being tested against \u2014 in Kenya, in Ghana, and now in Nigeria too." },
+        { label: "Tease + CTA", time: "1:15\u20131:30", text: "This series is going to walk through the real projects, the real numbers, and the real limits \u2014 including when blockchain is the wrong tool for the job. Follow along. First deep dive drops soon." }
+      ],
+      altCut: {
+        label: "30-second cut",
+        text: "In 2016, a farmer got paid for his wheat the second it was weighed \u2014 no bank, no five-week wait, just a smart contract. That's what blockchain actually does in agriculture: it doesn't fix farming, it fixes the paperwork and trust around it. And in Africa, where less than 10% of land is even formally documented, that problem is bigger than most people realize. This series breaks down the real projects \u2014 and the real limits. Follow along."
+      },
+      overlays: [
+        { time: "0:00", text: "Paid the second it was weighed." },
+        { time: "0:20", text: "7% of trade value = just paperwork" },
+        { time: "0:52", text: "<10% of African land is formally documented" }
+      ],
+      sourcesNote: "FAO Trade Policy Brief No. 33 (documentation cost, payment terms); FAO/ITU AgriDigital case study (2016 wheat settlement).",
+      meta: "~90 sec script \u00b7 filmed July 31, 2026",
       link: "scripts/episode-1-agriculture-blockchain-intro.md",
-      linkLabel: "Read full script \u2192"
+      linkLabel: "Raw .md \u2192"
     },
     {
       id: "ep-2-cafs",
       category: "scripts",
-      title: "Episode 2 (Deep Dive): The Blockchain Solar Dryer Project \u2014 Nigeria",
+      title: "Deep Dive: The Blockchain Solar Dryer Project \u2014 Nigeria",
       tags: ["episode", "script", "deep dive", "Nigeria"],
-      body: "First deep dive. Covers CAFS Africa x NSPRI's blockchain solar dryer project end to end: the 30-50% post-harvest loss problem, what the blockchain layer actually does (shared-equipment usage log, not a token), why blockchain vs. a plain database, the training/inclusion angle, and an honest \u201cwhat we don\u2019t know yet\u201d beat on missing scale numbers. Built from three named, on-record sources.",
-      meta: "~2:45-3:00 script (60 sec cut included) \u00b7 written July 31, 2026",
+      episodeNumber: 2,
+      status: "Published",
+      duration: "~2:45\u20133:00",
+      dateLabel: "Written July 31, 2026",
+      hook: "A Nigerian food research institute just plugged blockchain into a solar dryer. Not a metaphor \u2014 an actual solar-powered drying rig, with a blockchain layer tracking who uses it and when.",
+      body: "First deep dive. CAFS Africa x NSPRI's blockchain solar dryer project end to end: the 30-50% post-harvest loss problem, what the blockchain layer actually does, why blockchain vs. a plain database, the training/inclusion angle, and an honest gap on missing scale numbers. Built from three named, on-record sources.",
+      segments: [
+        { label: "Hook", time: "0:00\u20130:12", text: "A Nigerian food research institute just plugged blockchain into a solar dryer. Not a metaphor \u2014 an actual solar-powered drying rig, with a blockchain layer tracking who uses it and when. This is the Nigeria story I teased in episode one. Let's get into it." },
+        { label: "The problem", time: "0:12\u20130:40", text: "Start with the number that makes this worth doing at all: Nigeria loses somewhere between 30 and 50 percent of its perishable produce every year, according to NSPRI's own Executive Director, Professor Lateef Sanni. Bad storage, weak processing, no access to preservation tech. And it doesn't hit everyone equally \u2014 smallholder farmers, women processors, and rural communities absorb most of that loss, straight out of their income." },
+        { label: "The solution", time: "0:40\u20131:15", text: "So here's the fix: solar-powered dryers instead of open-air drying or fuel-burning methods \u2014 cleaner, cheaper to run, protects produce from contamination and rain. That part isn't new. What's new is the blockchain layer on top. CAFS Africa's founder, Azeez Salawu, frames it as solving an access problem, not just a drying problem \u2014 these dryers are shared community infrastructure, and blockchain gives you a transparent, tamper-proof record of who's using the equipment and when." },
+        { label: "Why blockchain", time: "1:15\u20131:45", text: "Remember episode one \u2014 blockchain in agriculture is usually about fixing trust and paperwork, not farming itself. This is that exact pattern, just physical instead of financial. When equipment is shared across a community, usage never gets tracked properly and there's no accountability when something breaks. Dr. Michael Omodara, leading training and deployment, has said the blockchain piece is there for real-time monitoring and accountability. Not hype \u2014 just a fairer queue." },
+        { label: "Who it's for", time: "1:45\u20132:05", text: "They're not just dropping in hardware and walking away. The project trains smallholder farmers, women processors, and young people to operate and maintain the dryers \u2014 with some trained as technicians and digital facilitators in their own communities." },
+        { label: "What we don't know", time: "2:05\u20132:30", text: "The honest part: at the point this was unveiled, there's no public number yet for how many dryers, how many farmers, or the budget. It's backed by UNDP's Tadamon Accelerator, and NSPRI is a real federal research institute \u2014 credibility is there. But it's a launch, not a three-year track record. I'll bring you real numbers the moment they're public." },
+        { label: "Close + CTA", time: "2:30\u20132:50", text: "This is exactly the kind of project this series exists to find \u2014 local, real, barely covered anywhere in Web3 content. Next up: tracking this one for updates, or a Kenyan project doing something similar with savings instead of hardware. Follow for that." }
+      ],
+      altCut: {
+        label: "60-second cut",
+        text: "Nigeria just unveiled a solar dryer with a blockchain layer built in \u2014 and no, it's not a token play. NSPRI, a federal food research institute, loses 30 to 50 percent of perishable produce every year to bad storage. Their fix: solar-powered dryers, shared across communities, with blockchain tracking who uses the equipment and when \u2014 so access stays fair and accountable instead of running on who-knows-who. It's backed by the UNDP's Tadamon Accelerator, and it comes with real training for farmers, women processors, and local youth technicians. What we don't have yet: hard numbers on scale or budget \u2014 this is a launch, not a track record. I'm watching it. Follow for the update."
+      },
+      overlays: [
+        { time: "0:00", text: "Blockchain + solar dryer. Nigeria." },
+        { time: "0:12", text: "30-50% of produce lost yearly \u2014 NSPRI" },
+        { time: "1:15", text: "Not a token. A shared-equipment logbook." },
+        { time: "2:05", text: "What we don't know yet:" }
+      ],
+      sourcesNote: "Nigerian NewsDirect, \u201cNGO, institute unveil blockchain-enabled solar dryer to tackle post-harvest losses,\u201d May 8, 2026. CoinTrust, \u201cNigeria Launches Blockchain Solar Dryer Food Project,\u201d May 11, 2026.",
+      meta: "~2:45-3:00 script \u00b7 written July 31, 2026",
       link: "scripts/episode-2-cafs-solar-dryer-deepdive.md",
-      linkLabel: "Read full script \u2192"
+      linkLabel: "Raw .md \u2192"
     },
 
     // ---------- CONTENT IDEAS ----------
@@ -186,6 +233,7 @@ window.LEDGER_DATA = {
     { date: "2026-07-31", note: "Repainted the whole site in black/white/green. Fixed the stocks panel (Stooq needed a browser-style User-Agent header) and the TVL panel (now always shows all three tracked protocols instead of silently dropping ones that don\u2019t resolve). Added FAO\u2019s official newsroom feed and Modern Farmer alongside AgFunderNews and AGDAILY. Added a mobile quick-nav bar so category filters are reachable from anywhere on the page without scrolling. Added \u201cFresh script angles\u201d: three auto-generated hook/body/CTA scaffolds built from whatever headlines are live right now." },
     { date: "2026-07-31", note: "Removed the ReFi protocol TVL panel \u2014 it was the least reliable of the four sensors and added little on its own. Field sensors is now three panels: crypto & carbon tokens, agribusiness stocks & ETFs, and AgTech signals, plus the fresh script-angle generator." },
     { date: "2026-07-31", note: "Added a \u201cScripts & Episodes\u201d category and a /scripts folder in the repo, so finished video scripts get logged and linked from the ledger as they\u2019re produced, not just researched. First entry: Episode 1, the agriculture x blockchain intro." },
-    { date: "2026-07-31", note: "First deep dive: researched the CAFS Africa x NSPRI blockchain solar dryer project properly (three named on-record sources, not the one-line summary from earlier general search) and rewrote the Africa ledger entry with the real detail \u2014 the 30-50% post-harvest loss stat, what the blockchain layer actually does, and an honest note on what scale numbers aren\u2019t public yet. Logged as Episode 2." }
+    { date: "2026-07-31", note: "First deep dive: researched the CAFS Africa x NSPRI blockchain solar dryer project properly (three named on-record sources, not the one-line summary from earlier general search) and rewrote the Africa ledger entry with the real detail \u2014 the 30-50% post-harvest loss stat, what the blockchain layer actually does, and an honest note on what scale numbers aren\u2019t public yet. Logged as Episode 2." },
+    { date: "2026-07-31", note: "Scripts stopped linking out to bare .md files. Episodes now render as dedicated cards (number, hook preview, status, duration) that open an in-page reader \u2014 full script broken into labeled segments, alt cut, on-screen overlay suggestions, and sources, all styled to match the rest of the site. Raw .md still linked at the bottom for anyone who wants the plain-text version." }
   ]
 };
