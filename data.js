@@ -291,6 +291,37 @@ window.LEDGER_DATA = {
       link: "scripts/episodes-3-4-5.md",
       linkLabel: "Raw .md \u2192"
     },
+    {
+      id: "ep-6-farms-kenya",
+      category: "scripts",
+      title: "FARMS Kenya \u2014 Savings, Not Insurance",
+      tags: ["episode", "script", "Kenya", "smallholder finance"],
+      episodeNumber: 6,
+      status: "Scripted",
+      duration: "~85 sec",
+      dateLabel: "Scripted Aug 7, 2026",
+      hook: "Less than 1% of smallholder farmers in Kenya buy crop insurance. Not because they don't need it. Because insurance, as a product, doesn't fit how they actually think about risk.",
+      body: "The Kenyan project teased at the end of Episode 2. Builds on the FARMS case study already logged under Worked Case Studies, adds fresh context: a sub-1% crop insurance adoption stat and the underlying wallet's early reach (~4,000 farmers, targeting 100,000 across Kenya/Uganda/Rwanda). Honest close: no public update yet on how the actual pilot performed post-launch.",
+      segments: [
+        { label: "Hook", time: "0:00\u20130:12", text: "Less than 1% of smallholder farmers in Kenya buy crop insurance. Not because they don't need it. Because insurance, as a product, doesn't fit how they actually think about risk." },
+        { label: "The fix", time: "0:12\u20130:45", text: "So a group of organizations, ICS, Agrics, and a Kenyan-facing fintech called Coin22, built something different: not insurance, a savings wallet. Farmers buy what they call 'drought coins' through a mobile wallet, and at the end of the season, satellite data decides how much they can cash out, more if it was a bad season, less if it was fine. It's blockchain underneath, so nobody can quietly edit the record." },
+        { label: "Why it matters", time: "0:45\u20131:05", text: "The wallet tech behind this was already reaching around four thousand farmers before this specific programme even launched, with a target of a hundred thousand across Kenya, Uganda, and Rwanda. People trust a savings account. They don't trust an insurance company they've never dealt with." },
+        { label: "Honest close", time: "1:05\u20131:25", text: "I don't have a public update yet on how this exact pilot performed after it launched. I'll bring you that the moment it's out there. Follow for it." }
+      ],
+      altCut: {
+        label: "30-second cut",
+        text: "Less than 1% of Kenyan smallholders buy crop insurance, not because they don't need it, but because insurance doesn't fit how they think about risk. So ICS, Agrics, and a fintech called Coin22 built a savings wallet instead: buy 'drought coins,' and satellite data decides your payout at season's end. Trust beats a hard sell. Follow for the update on how it's performed."
+      },
+      overlays: [
+        { time: "0:00", text: "<1% of Kenyan smallholders buy crop insurance" },
+        { time: "0:45", text: "~4,000 farmers on the wallet tech already" },
+        { time: "1:05", text: "What we don't know yet:" }
+      ],
+      sourcesNote: "FAO/ITU \u201cBlockchain for Agriculture\u201d (2019), FARMS chapter (Violanda de Man, ICS) \u2014 core case study, already logged under Worked Case Studies. NextBillion, \u201cBlockchain for Agriculture: Improving Supply Chain Efficiency and Access to Finance for Smallholder Farmers\u201d (Coin22 AgriWallet reach). CGSpace, \u201cEnhancing smallholder resilience through index-based crop insurance: Evaluation of the aMaizing Project in Kenya\u201d (sub-1% adoption stat).",
+      meta: "~85 sec script \u00b7 scripted Aug 7, 2026",
+      link: "scripts/episode-6-farms-kenya.md",
+      linkLabel: "Raw .md \u2192"
+    },
 
     // ---------- CONTENT IDEAS ----------
     { id: "idea-1", category: "idea", title: "What blockchain in agriculture actually solves", tags: ["episode idea"], body: "Trust, payment delay, and traceability \u2014 explained through AgriDigital or TE-FOOD as concrete cases, not hype.", meta: "Episode idea" },
@@ -313,6 +344,7 @@ window.LEDGER_DATA = {
     { date: "2026-07-31", note: "Added a \u201cScripts & Episodes\u201d category and a /scripts folder in the repo, so finished video scripts get logged and linked from the ledger as they\u2019re produced, not just researched. First entry: Episode 1, the agriculture x blockchain intro." },
     { date: "2026-07-31", note: "First deep dive: researched the CAFS Africa x NSPRI blockchain solar dryer project properly (three named on-record sources, not the one-line summary from earlier general search) and rewrote the Africa ledger entry with the real detail \u2014 the 30-50% post-harvest loss stat, what the blockchain layer actually does, and an honest note on what scale numbers aren\u2019t public yet. Logged as Episode 2." },
     { date: "2026-07-31", note: "Scripts stopped linking out to bare .md files. Episodes now render as dedicated cards (number, hook preview, status, duration) that open an in-page reader \u2014 full script broken into labeled segments, alt cut, on-screen overlay suggestions, and sources, all styled to match the rest of the site. Raw .md still linked at the bottom for anyone who wants the plain-text version." },
-    { date: "2026-08-07", note: "Added Episodes 3-5, all capped under 90 seconds per new format direction. Ep 3 (AI meets blockchain) and Ep 5 (fun episode: tokenized cows and CattleProof) are freshly researched, not just pulled from the existing ledger. Ep 4 repurposes the AgUnity case study already logged under Worked Case Studies into a tight human-story script. Added a \u201cScripted\u201d status distinct from \u201cPublished,\u201d since these haven\u2019t been filmed yet." }
+    { date: "2026-08-07", note: "Added Episodes 3-5, all capped under 90 seconds per new format direction. Ep 3 (AI meets blockchain) and Ep 5 (fun episode: tokenized cows and CattleProof) are freshly researched, not just pulled from the existing ledger. Ep 4 repurposes the AgUnity case study already logged under Worked Case Studies into a tight human-story script. Added a \u201cScripted\u201d status distinct from \u201cPublished,\u201d since these haven\u2019t been filmed yet." },
+    { date: "2026-08-07", note: "Added Episode 6: FARMS Kenya, the project teased at the end of Episode 2. Builds on the existing FARMS case study with fresh context, a sub-1% crop insurance adoption stat for Kenya and the underlying wallet's early reach, plus an honest note that there's no public update yet on how the actual pilot performed after its 2019 launch." }
   ]
 };
