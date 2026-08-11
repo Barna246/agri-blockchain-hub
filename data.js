@@ -322,6 +322,37 @@ window.LEDGER_DATA = {
       link: "scripts/episode-6-farms-kenya.md",
       linkLabel: "Raw .md \u2192"
     },
+    {
+      id: "ep-7-answering-comments",
+      category: "scripts",
+      title: "Answering the Best Pushback We\u2019ve Gotten",
+      tags: ["episode", "script", "Q&A", "community"],
+      episodeNumber: 7,
+      status: "Scripted",
+      duration: "~85 sec",
+      dateLabel: "Scripted Aug 7, 2026",
+      hook: "Someone left a sharper question in the comments than most of what I've scripted so far. Two parts: why blockchain over a normal database, and if blockchain is immutable, how do we know the data was even correct?",
+      body: "Response episode to a viewer comment (@Riqueza) on Episode 3, asking exactly what blockchain adds over a centralized database for AI-generated farm data, and the sharper follow-up: immutability guarantees data can't be secretly changed, not that it was accurate to begin with (the oracle problem). First Q&A-format episode in the series.",
+      segments: [
+        { label: "Hook", time: "0:00\u20130:12", text: "Someone left a sharper question in the comments than most of what I've scripted so far. Two parts: why blockchain over a normal database, and if blockchain is immutable, how do we know the data was even correct? Let's go." },
+        { label: "Why blockchain vs. a database", time: "0:12\u20130:38", text: "If it's just you and your own AI reading your own soil, a normal database is fine. Blockchain earns its keep when multiple parties, a farmer, an insurer, a buyer, don't fully trust each other's copy of the data. Remember FARMS a few episodes back? Satellite data decides the payout. If one company privately controlled that database, farmers couldn't check it wasn't quietly adjusted in the company's favor." },
+        { label: "Immutable \u2260 accurate", time: "0:38\u20131:05", text: "Now the sharper part: immutable means nobody can secretly change the record after it's written. It doesn't mean the record was correct when it was written. A bad sensor or a bad AI prediction gets locked in just as permanently as good data. This is genuinely called the oracle problem. Real projects handle it with multiple independent data sources cross-checked against each other, not one sensor deciding everything alone." },
+        { label: "Close", time: "1:05\u20131:20", text: "Blockchain doesn't make data true. It makes tampering visible. Different jobs. Good question, whoever left it. Follow for more of these." }
+      ],
+      altCut: {
+        label: "30-second cut",
+        text: "Quick answer to a sharp comment: blockchain over a database matters when multiple parties, like a farmer, an insurer, and a buyer, don't trust each other's copy of the data. And immutable doesn't mean correct, it just means nobody can secretly edit it after the fact. That's called the oracle problem. Blockchain makes tampering visible. It doesn't make data true."
+      },
+      overlays: [
+        { time: "0:00", text: "Answering a comment from @Riqueza" },
+        { time: "0:38", text: "Immutable \u2260 accurate" },
+        { time: "1:05", text: "Tampering visible \u2260 data true" }
+      ],
+      sourcesNote: "FAO/ITU \u201cE-Agriculture in Action: Blockchain for Agriculture\u201d (2019), \u201cBlockchain demystified\u201d chapter \u2014 on hardware/software/consensus-based oracles and how consensus oracles cross-check multiple sources. Same source that grounded the oracle framing in Episode 3. FARMS Kenya reference pulls from the case study already logged under Worked Case Studies.",
+      meta: "~85 sec script \u00b7 scripted Aug 7, 2026",
+      link: "scripts/episode-7-answering-comments.md",
+      linkLabel: "Raw .md \u2192"
+    },
 
     // ---------- CONTENT IDEAS ----------
     { id: "idea-1", category: "idea", title: "What blockchain in agriculture actually solves", tags: ["episode idea"], body: "Trust, payment delay, and traceability \u2014 explained through AgriDigital or TE-FOOD as concrete cases, not hype.", meta: "Episode idea" },
@@ -345,6 +376,7 @@ window.LEDGER_DATA = {
     { date: "2026-07-31", note: "First deep dive: researched the CAFS Africa x NSPRI blockchain solar dryer project properly (three named on-record sources, not the one-line summary from earlier general search) and rewrote the Africa ledger entry with the real detail \u2014 the 30-50% post-harvest loss stat, what the blockchain layer actually does, and an honest note on what scale numbers aren\u2019t public yet. Logged as Episode 2." },
     { date: "2026-07-31", note: "Scripts stopped linking out to bare .md files. Episodes now render as dedicated cards (number, hook preview, status, duration) that open an in-page reader \u2014 full script broken into labeled segments, alt cut, on-screen overlay suggestions, and sources, all styled to match the rest of the site. Raw .md still linked at the bottom for anyone who wants the plain-text version." },
     { date: "2026-08-07", note: "Added Episodes 3-5, all capped under 90 seconds per new format direction. Ep 3 (AI meets blockchain) and Ep 5 (fun episode: tokenized cows and CattleProof) are freshly researched, not just pulled from the existing ledger. Ep 4 repurposes the AgUnity case study already logged under Worked Case Studies into a tight human-story script. Added a \u201cScripted\u201d status distinct from \u201cPublished,\u201d since these haven\u2019t been filmed yet." },
-    { date: "2026-08-07", note: "Added Episode 6: FARMS Kenya, the project teased at the end of Episode 2. Builds on the existing FARMS case study with fresh context, a sub-1% crop insurance adoption stat for Kenya and the underlying wallet's early reach, plus an honest note that there's no public update yet on how the actual pilot performed after its 2019 launch." }
+    { date: "2026-08-07", note: "Added Episode 6: FARMS Kenya, the project teased at the end of Episode 2. Builds on the existing FARMS case study with fresh context, a sub-1% crop insurance adoption stat for Kenya and the underlying wallet's early reach, plus an honest note that there's no public update yet on how the actual pilot performed after its 2019 launch." },
+    { date: "2026-08-07", note: "Added Episode 7: a response to a viewer's comment on Episode 3, asking what blockchain adds over a centralized database for AI farm data, and how immutability doesn't guarantee the underlying data was accurate (the oracle problem). First Q&A-format episode \u2014 a new content variant alongside explainer, deep dive, and fun." }
   ]
 };
