@@ -272,22 +272,27 @@ window.LEDGER_DATA = {
       tags: ["episode", "script", "fun", "NFT"],
       episodeNumber: 5,
       status: "Scripted",
-      duration: "~85 sec",
-      dateLabel: "Scripted Aug 7, 2026",
-      hook: "Someone tokenized their own farts as an NFT during the pandemic. I need you to sit with that for a second. Now here's the part that's actually useful.",
-      body: "The deliberate fun/lighter episode: opens on a genuinely funny tokenization story (fart NFTs) then pivots to a real, useful case, a Brazilian farmer using tokenized cows as loan collateral, plus CattleProof's blockchain cattle IDs in the US.",
+      duration: "~75 sec",
+      dateLabel: "Rewritten Aug 7, 2026",
+      hook: "Someone tokenized their own farts as an NFT during the pandemic. Somewhere else, a farmer tokenized real cows and got an actual bank loan. Both really happened. Let's talk about the one that's actually useful.",
+      body: "Rewritten for a tighter through-line: the fart/cow contrast is stated up front instead of only landing in the punchline, so the whole body pays off one idea instead of two loosely connected halves. Fixed the loan figure to the precise $19,600 instead of a rounded number.",
       segments: [
-        { label: "Hook", time: "0:00\u20130:12", text: "Someone tokenized their own farts as an NFT during the pandemic. I need you to sit with that for a second. Now here's the part that's actually useful." },
-        { label: "Brazil's cows", time: "0:12\u20130:40", text: "In Brazil, a farmer used ten actual cows as collateral for a loan, about twenty thousand dollars, by giving each cow its own blockchain token tied to a digital ID. It worked. It's a real proof of concept, and the fund behind it says it could scale to eighty million dollars in livestock-backed loans." },
-        { label: "CattleProof", time: "0:40\u20131:05", text: "There's also a company in the US called CattleProof, basically a digital driver's license for cows: birthplace, weight, medical history, all on a blockchain so it can't be quietly edited when the cow gets sold. No crypto wallet needed, the farmer just uses an app." },
-        { label: "Punchline", time: "1:05\u20131:25", text: "So yes, someone tokenized farts. But somewhere else, tokenizing a cow just got a real farmer real credit. Wildest range this space has. Follow for more of it." }
+        { label: "Hook", time: "0:00\u20130:12", text: "Someone tokenized their own farts as an NFT during the pandemic. Somewhere else, a farmer tokenized real cows and got an actual bank loan. Both really happened. Let's talk about the one that's actually useful." },
+        { label: "Brazil's cows", time: "0:12\u20130:38", text: "In Brazil, a farmer used ten cows as collateral for a $19,600 loan, giving each cow its own blockchain token tied to a digital ID. It worked. The investment fund behind it says the model could scale to eighty million dollars in livestock-backed loans." },
+        { label: "CattleProof", time: "0:38\u20131:00", text: "In the US, a company called CattleProof does something similar: a digital ID for each cow, birthplace, weight, medical history, all on a blockchain so it can't be quietly changed later. No crypto wallet needed. The farmer just uses an app." },
+        { label: "Punchline", time: "1:00\u20131:15", text: "Tokenizing farts was a joke. Tokenizing cows pays real bills. Follow for more of the weird side of this space." }
       ],
       altCut: {
         label: "30-second cut",
-        text: "Someone tokenized their own farts as an NFT. Meanwhile, a Brazilian farmer used ten actual cows as blockchain collateral and got a real loan. Same tech, wildly different outcomes. Follow for the weirdest corners of this space."
+        text: "Someone tokenized their own farts as an NFT. Somewhere else, a Brazilian farmer tokenized ten real cows and got a $19,600 loan. Both really happened. One's a joke, one pays real bills. Follow for the weird side of blockchain agriculture."
       },
-      sourcesNote: "Cointelegraph, \u201cThe 10 Weirdest Things Already Finding a Home Onchain\u201d (tokenized cows + the fart NFT); Coin-Turk News, on the Brazil cow-collateral loan and Target FIDC; The Spoon / Van Trump Report, on CattleProof.",
-      meta: "~85 sec script \u00b7 scripted Aug 7, 2026",
+      overlays: [
+        { time: "0:00", text: "Both of these are real." },
+        { time: "0:12", text: "$19,600 loan, 10 tokenized cows" },
+        { time: "1:00", text: "Tokenizing cows pays real bills" }
+      ],
+      sourcesNote: "Cointelegraph, \u201cThe 10 Weirdest Things Already Finding a Home Onchain\u201d (tokenized cows + the fart NFT); Coin-Turk News, on the Brazil cow-collateral loan (100,000 Brazilian real \u2248 $19,600) and Target FIDC; The Spoon / Van Trump Report, on CattleProof.",
+      meta: "~75 sec script \u00b7 rewritten Aug 7, 2026",
       link: "scripts/episodes-3-4-5.md",
       linkLabel: "Raw .md \u2192"
     },
@@ -377,6 +382,7 @@ window.LEDGER_DATA = {
     { date: "2026-07-31", note: "Scripts stopped linking out to bare .md files. Episodes now render as dedicated cards (number, hook preview, status, duration) that open an in-page reader \u2014 full script broken into labeled segments, alt cut, on-screen overlay suggestions, and sources, all styled to match the rest of the site. Raw .md still linked at the bottom for anyone who wants the plain-text version." },
     { date: "2026-08-07", note: "Added Episodes 3-5, all capped under 90 seconds per new format direction. Ep 3 (AI meets blockchain) and Ep 5 (fun episode: tokenized cows and CattleProof) are freshly researched, not just pulled from the existing ledger. Ep 4 repurposes the AgUnity case study already logged under Worked Case Studies into a tight human-story script. Added a \u201cScripted\u201d status distinct from \u201cPublished,\u201d since these haven\u2019t been filmed yet." },
     { date: "2026-08-07", note: "Added Episode 6: FARMS Kenya, the project teased at the end of Episode 2. Builds on the existing FARMS case study with fresh context, a sub-1% crop insurance adoption stat for Kenya and the underlying wallet's early reach, plus an honest note that there's no public update yet on how the actual pilot performed after its 2019 launch." },
-    { date: "2026-08-07", note: "Added Episode 7: a response to a viewer's comment on Episode 3, asking what blockchain adds over a centralized database for AI farm data, and how immutability doesn't guarantee the underlying data was accurate (the oracle problem). First Q&A-format episode \u2014 a new content variant alongside explainer, deep dive, and fun." }
+    { date: "2026-08-07", note: "Added Episode 7: a response to a viewer's comment on Episode 3, asking what blockchain adds over a centralized database for AI farm data, and how immutability doesn't guarantee the underlying data was accurate (the oracle problem). First Q&A-format episode \u2014 a new content variant alongside explainer, deep dive, and fun." },
+    { date: "2026-08-07", note: "Rewrote Episode 5. The hook (fart NFT) and punchline were only connected by a single callback line at the very end, with 50 seconds of unrelated cow content in between. Restructured so the fart/cow contrast is stated up front and the whole script pays off one idea instead of two loosely stitched halves. Also corrected the loan figure from a rounded \u201ctwenty thousand\u201d to the precise $19,600." }
   ]
 };

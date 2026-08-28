@@ -43,20 +43,20 @@ Same tool, two totally different problems solved. That's usually a sign the tech
 
 ## Episode 5: The Weirdest Corner of Blockchain Agriculture (fun / lighter tone)
 
-**Full script (~85 sec)**
+**Full script (~75 sec) — rewritten Aug 7, 2026**
 
-"Someone tokenized their own farts as an NFT during the pandemic. I need you to sit with that for a second. Now here's the part that's actually useful.
+"Someone tokenized their own farts as an NFT during the pandemic. Somewhere else, a farmer tokenized real cows and got an actual bank loan. Both really happened. Let's talk about the one that's actually useful.
 
-In Brazil, a farmer used ten actual cows as collateral for a loan — about twenty thousand dollars — by giving each cow its own blockchain token tied to a digital ID. It worked. It's a real proof of concept, and the fund behind it says it could scale to eighty million dollars in livestock-backed loans.
+In Brazil, a farmer used ten cows as collateral for a $19,600 loan, giving each cow its own blockchain token tied to a digital ID. It worked. The investment fund behind it says the model could scale to eighty million dollars in livestock-backed loans.
 
-There's also a company in the US called CattleProof, basically a digital driver's license for cows: birthplace, weight, medical history, all on a blockchain so it can't be quietly edited when the cow gets sold. No crypto wallet needed, the farmer just uses an app.
+In the US, a company called CattleProof does something similar: a digital ID for each cow, birthplace, weight, medical history, all on a blockchain so it can't be quietly changed later. No crypto wallet needed. The farmer just uses an app.
 
-So yes, someone tokenized farts. But somewhere else, tokenizing a cow just got a real farmer real credit. Wildest range this space has. Follow for more of it."
+Tokenizing farts was a joke. Tokenizing cows pays real bills. Follow for more of the weird side of this space."
 
 **30-sec cut:**
-"Someone tokenized their own farts as an NFT. Meanwhile, a Brazilian farmer used ten actual cows as blockchain collateral and got a real loan. Same tech, wildly different outcomes. Follow for the weirdest corners of this space."
+"Someone tokenized their own farts as an NFT. Somewhere else, a Brazilian farmer tokenized ten real cows and got a $19,600 loan. Both really happened. One's a joke, one pays real bills. Follow for the weird side of blockchain agriculture."
 
-**Sources:** Cointelegraph, "The 10 Weirdest Things Already Finding a Home Onchain" (tokenized cows + the fart NFT); Coin-Turk News, on the Brazil cow-collateral loan and Target FIDC; The Spoon / Van Trump Report, on CattleProof.
+**Sources:** Cointelegraph, "The 10 Weirdest Things Already Finding a Home Onchain" (tokenized cows + the fart NFT); Coin-Turk News, on the Brazil cow-collateral loan (100,000 Brazilian real ≈ $19,600) and Target FIDC; The Spoon / Van Trump Report, on CattleProof.
 
 ---
 
