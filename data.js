@@ -363,34 +363,34 @@ window.LEDGER_DATA = {
       linkLabel: "Raw .md \u2192"
     },
     {
-      id: "ep-8-first-grain-sale",
+      id: "ep-8-cellulant-agrikore",
       category: "scripts",
-      title: "The First Blockchain Grain Sale, Ten Years Later",
-      tags: ["episode", "script", "AgriDigital", "narrative", "Australia"],
+      title: "Nigeria's Own Blockchain Marketplace, 7 Million Farmers",
+      tags: ["episode", "script", "Nigeria", "Cellulant", "financing"],
       episodeNumber: 8,
       status: "Scripted",
       duration: "~85 sec",
       dateLabel: "Scripted Sep 2, 2026",
-      hook: "December 2016. A farmer in Australia delivers a truck of wheat. The second it hits the scale, he's paid. Not next week. Not after an invoice clears. That second.",
-      body: "Full narrative telling of the AgriDigital story already logged under Worked Case Studies (idea-7 from the ledger), plus a real update on what happened to the company since: still operating in 2026, fresh funding, real revenue, but blockchain is no longer the pitch, it's one feature folded into a bigger grain platform. A rare episode where the honest-gap section gets a real answer instead of an open question.",
+      hook: "There's a Nigerian company running a blockchain marketplace for farmers, and it claims to have reached over seven million people. Most people covering this space have never mentioned it.",
+      body: "Cellulant's Agrikore platform, a blockchain-based marketplace and lending layer for African farmers. Built by a Nigerian fintech, not a foreign pilot project, which makes it a rare case of homegrown blockchain-in-agriculture at real scale. Honest caveat: most of the detailed reporting on its numbers is a few years old and company-reported, not independently audited.",
       segments: [
-        { label: "Hook", time: "0:00\u20130:12", text: "December 2016. A farmer in Australia delivers a truck of wheat. The second it hits the scale, he's paid. Not next week. Not after an invoice clears. That second." },
-        { label: "The mechanism", time: "0:12\u20130:38", text: "Grower David Whillock delivered 23.46 metric tons of wheat to a buyer in Dubbo, New South Wales. A smart contract, running on a private Ethereum instance built by a two-year-old startup called AgriDigital, triggered payment and title transfer at the same moment the grain was weighed. Normally a farmer delivers first and waits, sometimes weeks, exposed the whole time if the buyer can't pay. This closed that gap to zero." },
-        { label: "Did it scale?", time: "0:38\u20131:05", text: "It wasn't a one-off. In 2017, AgriDigital ran a pilot with CBH Group, Australia's largest grain exporter, at one of its mills. That December, Rabobank tested a three-party financing deal settled the same way. By 2019, the platform had roughly 1,300 active users and had processed over 1.6 million metric tons of grain." },
-        { label: "What happened after", time: "1:05\u20131:25", text: "Ten years on, AgriDigital is still running. It closed a fresh 25 million dollar funding round and pulls in real revenue every year. But blockchain isn't the pitch anymore. It's one feature folded into a bigger grain management platform. That's not failure. That's what happens when new tech actually works: it stops being the headline and becomes the plumbing." }
+        { label: "Hook", time: "0:00\u20130:12", text: "There's a Nigerian company running a blockchain marketplace for farmers, and it claims to have reached over seven million people. Most people covering this space have never mentioned it." },
+        { label: "What it is", time: "0:12\u20130:38", text: "The company is Cellulant, a pan-African fintech. It runs two platforms: Tingg, for payments, and Agrikore, the blockchain layer. On Agrikore, a farmer's own produce can serve as collateral, and the whole trade runs through smart contracts, so a lender can trust the ledger instead of trusting a middleman's paperwork." },
+        { label: "How big", time: "0:38\u20131:00", text: "Cellulant raised 47.5 million dollars from TPG Growth's Rise Fund to scale it. In Nigeria specifically, it signed a 2 billion naira loan facility for farmers, routed through NIRSAL, the federal government's own agriculture lending guarantee body. The company says it has reached over 7 million farmers across the continent, working with around 120 banks." },
+        { label: "Honest close", time: "1:00\u20131:25", text: "Most of the detailed numbers on this come from a few years back, and they're the company's own figures, not an independent audit. Still, this is one of the largest homegrown blockchain deployments in African agriculture, built by a Nigerian company, sitting in plain sight." }
       ],
       altCut: {
         label: "30-second cut",
-        text: "December 2016: a farmer in Australia gets paid the second his wheat hits the scale, through a smart contract built by a startup called AgriDigital, the world's first blockchain settlement of a physical commodity. By 2019 it had processed over 1.6 million metric tons of grain. Ten years later, the company's still running. Blockchain's just not the headline anymore. It's the plumbing."
+        text: "A Nigerian fintech called Cellulant runs a blockchain marketplace for farmers called Agrikore, where a farmer's own produce can act as loan collateral through smart contracts. It's raised 47.5 million dollars, signed a 2 billion naira loan facility through NIRSAL, and claims to have reached over 7 million farmers continent-wide. Homegrown, at real scale, and barely covered."
       },
       overlays: [
-        { time: "0:00", text: "Dec 2016: first blockchain grain settlement" },
-        { time: "0:38", text: "1,300+ users, 1.6M+ tonnes by 2019" },
-        { time: "1:05", text: "2026: still running, blockchain now one feature of many" }
+        { time: "0:00", text: "Nigerian blockchain marketplace, 7M+ farmers claimed" },
+        { time: "0:38", text: "$47.5M raised, \u20a62B loan facility via NIRSAL" },
+        { time: "1:00", text: "Company-reported figure, not independently audited" }
       ],
-      sourcesNote: "FAO/ITU \u201cBlockchain for Agriculture\u201d (2019), AgriDigital chapter (Bridie Ohlsson) \u2014 same case study already logged under Worked Case Studies, for the founding story and 2019 usage numbers. Company status as of 2025/2026 (funding round, revenue, current product positioning) per Tracxn and Growjo company profiles.",
+      sourcesNote: "BrandCrunch Nigeria / Innovation Village (2018, TPG Growth funding round and 7M-farmer figure). APO Group / Africa Newsroom press release (NIRSAL loan facility signing at Cellulant Nigeria's Partner Summit, Lagos). The Guardian Nigeria, on Agrikore's place in Africa's agritech market.",
       meta: "~85 sec script \u00b7 scripted Sep 2, 2026",
-      link: "scripts/episode-8-first-grain-sale.md",
+      link: "scripts/episode-8-cellulant-agrikore.md",
       linkLabel: "Raw .md \u2192"
     },
 
