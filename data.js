@@ -63,8 +63,7 @@ window.LEDGER_DATA = {
     { id: "the-seam", category: "global", title: "The Seam \u00d7 IBM", tags: ["cotton", "consortium"], body: "Cotton-industry blockchain consortium backing a $7bn+ commodities trading platform. Owners include Cargill, Louis Dreyfus, and Olam.", meta: "US-based, global cotton trade" },
     { id: "chromaway", category: "global", title: "ChromaWay", tags: ["land titles", "Sweden"], body: "Land-title registry pilot with Lantm\u00e4teriet, Sweden\u2019s land authority \u2014 a useful comparison case for the African land-documentation problem.", meta: "Sweden" },
     { id: "factom", category: "global", title: "Factom", tags: ["land titles", "Honduras"], body: "Ran a 2015 land-title blockchain pilot with the Honduran government to fight registry fraud.", meta: "Honduras, 2015" },
-    { id: "cellulant-agrikore", category: "global", title: "Cellulant Agrikore", tags: ["Nigeria", "marketplace", "financing"], body: "Blockchain-based agricultural marketplace and payment platform built by Nigerian fintech Cellulant. Reported to have served more than 7 million farmers across the continent, backed by a $47.5M raise from TPG Growth's Rise Fund and a signed N2 billion loan facility for Nigerian farmers routed through NIRSAL. Farmer produce serves as its own collateral, with transactions recorded on smart contracts.", meta: "Nigeria, active since 2018" },
-    { id: "dimitra-co", category: "global", title: "Dimitra", tags: ["AI", "satellite", "smallholders"], body: "Global agtech company combining blockchain, AI, and satellite imagery for smallholder farmers. Active in Libya (520 farms under a government AI-ASA project), Kenya (targeting 1 million farmers by year end through community-based digital champions), and Latin America (helping Brazilian fruit exporters meet EU deforestation rules). Runs its own token, DMTR.", meta: "Global, CEO Jon Trask" },
+    { id: "cellulant-agrikore", category: "global", title: "Cellulant Agrikore", tags: ["Nigeria", "marketplace", "financing"], body: "Blockchain-based agricultural marketplace and payment platform built by Nigerian fintech Cellulant. Announced May 2018: a $47.5M raise from TPG Growth's Rise Fund alongside a claimed 7 million farmers reached across the continent. February 2020: signed a \u20a62 billion loan facility for Nigerian farmers routed through NIRSAL. No independently reported update to the farmer count or funding figures since 2020. A 2024 academic paper on Nigerian agri-app adoption still lists Agrikore as active, describing a narrower current role: farmers redeeming discounted seed and fertilizer certificates via a partnership with the federal government.", meta: "Nigeria; key claims dated May 2018 and Feb 2020, referenced as still active in a 2024 academic paper" },    { id: "dimitra-co", category: "global", title: "Dimitra", tags: ["AI", "satellite", "smallholders"], body: "Global agtech company combining blockchain, AI, and satellite imagery for smallholder farmers. Active in Libya (520 farms under a government AI-ASA project), Kenya (targeting 1 million farmers by year end through community-based digital champions), and Latin America (helping Brazilian fruit exporters meet EU deforestation rules). Runs its own token, DMTR.", meta: "Global, CEO Jon Trask" },
 
     // ---------- WORKED CASE STUDIES ----------
     {
@@ -369,27 +368,27 @@ window.LEDGER_DATA = {
       tags: ["episode", "script", "Nigeria", "Cellulant", "financing"],
       episodeNumber: 8,
       status: "Scripted",
-      duration: "~85 sec",
-      dateLabel: "Scripted Sep 2, 2026",
-      hook: "There's a Nigerian company running a blockchain marketplace for farmers, and it claims to have reached over seven million people. Most people covering this space have never mentioned it.",
-      body: "Cellulant's Agrikore platform, a blockchain-based marketplace and lending layer for African farmers. Built by a Nigerian fintech, not a foreign pilot project, which makes it a rare case of homegrown blockchain-in-agriculture at real scale. Honest caveat: most of the detailed reporting on its numbers is a few years old and company-reported, not independently audited.",
+      duration: "~90 sec",
+      dateLabel: "Scripted Sep 2, 2026, dating corrected Sep 2, 2026",
+      hook: "There's a Nigerian company running a blockchain marketplace for farmers, and it once claimed to have reached over seven million people. Here's how current that number actually is.",
+      body: "Cellulant's Agrikore platform, a blockchain-based marketplace and lending layer for African farmers. Built by a Nigerian fintech, not a foreign pilot project. Cross-checked in real time: the headline numbers date to May 2018 and February 2020, with no independently reported update since. A 2024 academic paper confirms the platform is still active but describes a narrower current role.",
       segments: [
-        { label: "Hook", time: "0:00\u20130:12", text: "There's a Nigerian company running a blockchain marketplace for farmers, and it claims to have reached over seven million people. Most people covering this space have never mentioned it." },
-        { label: "What it is", time: "0:12\u20130:38", text: "The company is Cellulant, a pan-African fintech. It runs two platforms: Tingg, for payments, and Agrikore, the blockchain layer. On Agrikore, a farmer's own produce can serve as collateral, and the whole trade runs through smart contracts, so a lender can trust the ledger instead of trusting a middleman's paperwork." },
-        { label: "How big", time: "0:38\u20131:00", text: "Cellulant raised 47.5 million dollars from TPG Growth's Rise Fund to scale it. In Nigeria specifically, it signed a 2 billion naira loan facility for farmers, routed through NIRSAL, the federal government's own agriculture lending guarantee body. The company says it has reached over 7 million farmers across the continent, working with around 120 banks." },
-        { label: "Honest close", time: "1:00\u20131:25", text: "Most of the detailed numbers on this come from a few years back, and they're the company's own figures, not an independent audit. Still, this is one of the largest homegrown blockchain deployments in African agriculture, built by a Nigerian company, sitting in plain sight." }
+        { label: "Hook", time: "0:00\u20130:12", text: "There's a Nigerian company running a blockchain marketplace for farmers, and it once claimed to have reached over seven million people. Here's how current that number actually is." },
+        { label: "What it is", time: "0:12\u20130:35", text: "The company is Cellulant, a pan-African fintech. It runs two platforms: Tingg, for payments, and Agrikore, the blockchain layer. On Agrikore, a farmer's own produce can serve as collateral, and the whole trade runs through smart contracts, so a lender can trust the ledger instead of trusting a middleman's paperwork." },
+        { label: "How big, and when", time: "0:35\u20131:02", text: "Back in May 2018, Cellulant raised 47.5 million dollars from TPG Growth's Rise Fund, announcing at the same time that Agrikore had already reached over 7 million farmers across the continent. In February 2020, it signed a 2 billion naira loan facility for Nigerian farmers specifically, routed through NIRSAL, the federal government's agriculture lending guarantee body." },
+        { label: "Honest close", time: "1:02\u20131:30", text: "Nobody has published an updated farmer count or funding figure since 2020. A 2024 academic paper on Nigerian farming apps still lists Agrikore as active, but describes a narrower job today: farmers redeeming discounted seed and fertilizer certificates through a government partnership. The platform's still running. What scale it's running at right now is genuinely unclear." }
       ],
       altCut: {
         label: "30-second cut",
-        text: "A Nigerian fintech called Cellulant runs a blockchain marketplace for farmers called Agrikore, where a farmer's own produce can act as loan collateral through smart contracts. It's raised 47.5 million dollars, signed a 2 billion naira loan facility through NIRSAL, and claims to have reached over 7 million farmers continent-wide. Homegrown, at real scale, and barely covered."
+        text: "A Nigerian fintech called Cellulant runs a blockchain marketplace called Agrikore, where a farmer's own produce can act as loan collateral through smart contracts. In 2018 it raised 47.5 million dollars and claimed 7 million farmers reached. In 2020 it signed a 2 billion naira loan facility. Nothing's been updated publicly since, though a 2024 paper confirms it's still active, just in a narrower role."
       },
       overlays: [
-        { time: "0:00", text: "Nigerian blockchain marketplace, 7M+ farmers claimed" },
-        { time: "0:38", text: "$47.5M raised, \u20a62B loan facility via NIRSAL" },
-        { time: "1:00", text: "Company-reported figure, not independently audited" }
+        { time: "0:00", text: "7M+ farmers claimed \u2014 but when?" },
+        { time: "0:35", text: "$47.5M raised: May 2018. \u20a62B loan facility: Feb 2020." },
+        { time: "1:02", text: "No public update since 2020; still active per a 2024 paper" }
       ],
-      sourcesNote: "BrandCrunch Nigeria / Innovation Village (2018, TPG Growth funding round and 7M-farmer figure). APO Group / Africa Newsroom press release (NIRSAL loan facility signing at Cellulant Nigeria's Partner Summit, Lagos). The Guardian Nigeria, on Agrikore's place in Africa's agritech market.",
-      meta: "~85 sec script \u00b7 scripted Sep 2, 2026",
+      sourcesNote: "BrandCrunch Nigeria and Innovation Village, both dated May 15, 2018 (TPG Growth funding round and the original 7M-farmer figure). APO Group / Africa Newsroom press release, February 2020 (NIRSAL loan facility signing at Cellulant Nigeria's Partner Summit, Lagos). The Guardian Nigeria, July 2019 (Agrikore in the CTA/Dalberg 'State of Digitalisation of Agriculture in Africa 2019' report). Kolapo & Didunyemi, Agriculture & Food Security journal, 2024 (Agrikore listed as an active but narrower-role Nigerian farming app).",
+      meta: "~90 sec script \u00b7 scripted Sep 2, 2026 \u00b7 dating cross-checked Sep 2, 2026",
       link: "scripts/episode-8-cellulant-agrikore.md",
       linkLabel: "Raw .md \u2192"
     },
@@ -453,6 +452,37 @@ window.LEDGER_DATA = {
       sourcesNote: "Karl W\u00fcst and Arthur Gervais, \u2018Do you Need a Blockchain?\u2019, IACR Cryptology ePrint Archive 2017/375, ETH Zurich, presented at IEEE CVCBT 2018 \u2014 the actual source behind nearly every blockchain decision flowchart circulating online. Same source now correcting the ledger's risk-category entry, previously misattributed to the US Department of Homeland Security.",
       meta: "~85 sec script \u00b7 scripted Sep 2, 2026",
       link: "scripts/episode-10-blockchain-decision.md",
+      linkLabel: "Raw .md \u2192"
+    },
+    {
+      id: "ep-11-fao-innovate-africa",
+      category: "scripts",
+      title: "$50,000 for AI Farming Tools \u2014 Applications Just Closed",
+      tags: ["episode", "script", "AI", "funding", "opportunity"],
+      episodeNumber: 11,
+      status: "Scripted",
+      duration: "~85 sec",
+      dateLabel: "Scripted Sep 2, 2026",
+      hook: "Fifty thousand dollars, for one AI farming tool, in one of five African countries. Applications just closed a couple of days ago. Here's what they were actually looking for.",
+      body: "News/opportunity episode on FAO and Smart Africa's third Innovate Africa Challenge (2026): $50,000 to move an AI agriculture tool from pilot into real government-backed deployment across five countries. Applications closed August 31, 2026, two days before this script was written; winners expected within the month.",
+      segments: [
+        { label: "Hook", time: "0:00\u20130:12", text: "Fifty thousand dollars, for one AI farming tool, in one of five African countries. Applications just closed a couple of days ago. Here's what they were actually looking for." },
+        { label: "What it is", time: "0:12\u20130:40", text: "It's called the Innovate Africa Challenge, this is its third year, run jointly by the FAO and the Smart Africa Secretariat. Earlier editions funded new ideas. This one specifically funds AI agriculture tools that already work at a small scale and need help scaling into real, government-backed deployment." },
+        { label: "Where and what", time: "0:40\u20131:05", text: "It's open only to Ghana, Kenya, Malawi, Rwanda, and Uganda, focused on precision agriculture, crop-yield prediction, and pest and disease early warning. Whoever wins works directly with government ministries and FAO country offices to actually deploy it, not pilot it again." },
+        { label: "Why this matters", time: "1:05\u20131:25", text: "Applications closed August 31st. Winners get announced sometime this month. If you're building anything in this space, or know someone who is, this is worth tracking, because a program that funds real deployment instead of another pilot is rarer than it sounds." }
+      ],
+      altCut: {
+        label: "30-second cut",
+        text: "FAO and Smart Africa just closed applications for fifty thousand dollars in funding, aimed at AI farming tools ready to move from pilot into real government deployment, only in Ghana, Kenya, Malawi, Rwanda, and Uganda. Winners are announced this month. Worth tracking if you're building anything in this space."
+      },
+      overlays: [
+        { time: "0:00", text: "$50,000, deployment funding, not another pilot" },
+        { time: "0:40", text: "Ghana, Kenya, Malawi, Rwanda, Uganda only" },
+        { time: "1:05", text: "Applications closed Aug 31, 2026 \u2014 winners this month" }
+      ],
+      sourcesNote: "Tech In Africa, via WINS Solutions, Aug 3, 2026. AgriFocus Africa, Aug 3, 2026. Opportunities for Youth, Jul 28, 2026 \u2014 all three cover the same FAO/Smart Africa announcement with consistent detail.",
+      meta: "~85 sec script \u00b7 scripted Sep 2, 2026",
+      link: "scripts/episode-11-fao-innovate-africa.md",
       linkLabel: "Raw .md \u2192"
     },
 
