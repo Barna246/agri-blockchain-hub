@@ -127,7 +127,7 @@ window.LEDGER_DATA = {
     { id: "solana-compass", category: "refi", title: "Solana Compass \u2014 RWA/Carbon Credits", tags: ["directory", "Solana"], body: "Running directory of live sustainability dApps on Solana \u2014 useful if you want a snapshot of one chain\u2019s ecosystem specifically.", meta: "solanacompass.com" },
 
     // ---------- RISKS & LIMITS ----------
-    { id: "dhs-flowchart", category: "risk", title: "\u201cDo you even need a blockchain?\u201d", tags: ["DHS", "decision framework"], body: "The US Department of Homeland Security publishes a decision flowchart: no shared multi-party data store needed, no real historical-immutability requirement, or no genuine trust/control dispute over who runs the data \u2014 then a normal database is the right call, not blockchain. A genuinely useful on-screen visual for an episode that pushes back on blockchain-as-default.", meta: "US DHS decision framework" },
+    { id: "wust-gervais-flowchart", category: "risk", title: "\u201cDo you even need a blockchain?\u201d", tags: ["academic", "decision framework"], body: "Karl W\u00fcst and Arthur Gervais (ETH Zurich) built the decision tree nearly every other \u201cdo you need a blockchain\u201d flowchart online is copied from. Boils down to three questions: do multiple mutually-distrusting parties need write access to the same record, do you need that history to be tamper-proof, and is there truly no trusted third party everyone would already accept instead? Answer yes to all three and a blockchain may help; answer no to any one and a normal database is the right call. Correction: this entry previously misattributed the flowchart to the US Department of Homeland Security \u2014 that could not be verified and has been corrected to the actual source.", meta: "K. W\u00fcst & A. Gervais, IACR ePrint 2017/375, ETH Zurich (IEEE CVCBT 2018)" },
     { id: "pow-energy", category: "risk", title: "Proof-of-work energy cost", tags: ["Bitcoin", "energy", "PoW vs PoS"], body: "Bitcoin-style proof-of-work can run roughly 275 kWh per transaction (Digiconomist\u2019s Bitcoin Energy Consumption Index) \u2014 worth contrasting with newer proof-of-stake designs.", meta: "Digiconomist" },
     { id: "standards-immature", category: "risk", title: "Standards are still immature", tags: ["ISO", "ITU-T"], body: "No mature international standard governs DLT yet. ISO Technical Committee 307 and several ITU-T focus groups are actively working on this.", meta: "ISO / ITU-T" },
     { id: "code-is-law", category: "risk", title: "Smart contracts aren\u2019t a substitute for law", tags: ["Ethereum", "hard fork", "governance"], body: "The 2016 Ethereum hard fork \u2014 after an exploit let a user withdraw roughly $50 million \u2014 is the canonical cautionary tale for why \u201ccode is law\u201d breaks down in real disputes. Especially relevant given the regulatory uncertainty in African markets.", meta: "Ethereum, 2016" },
@@ -391,6 +391,68 @@ window.LEDGER_DATA = {
       sourcesNote: "BrandCrunch Nigeria / Innovation Village (2018, TPG Growth funding round and 7M-farmer figure). APO Group / Africa Newsroom press release (NIRSAL loan facility signing at Cellulant Nigeria's Partner Summit, Lagos). The Guardian Nigeria, on Agrikore's place in Africa's agritech market.",
       meta: "~85 sec script \u00b7 scripted Sep 2, 2026",
       link: "scripts/episode-8-cellulant-agrikore.md",
+      linkLabel: "Raw .md \u2192"
+    },
+    {
+      id: "ep-9-dimitra",
+      category: "scripts",
+      title: "One Company, Three Continents",
+      tags: ["episode", "script", "Dimitra", "AI", "satellite"],
+      episodeNumber: 9,
+      status: "Scripted",
+      duration: "~85 sec",
+      dateLabel: "Scripted Sep 2, 2026",
+      hook: "One company is running AI, satellite, and blockchain together across three continents, and most farmers on it have never touched crypto.",
+      body: "Dimitra, a global agtech company combining blockchain, AI, and satellite imagery for smallholder farmers, active in Libya, Kenya, and Brazil. Honest note on the DMTR token attached to the platform, since token-based agtech has a mixed track record.",
+      segments: [
+        { label: "Hook", time: "0:00\u20130:12", text: "One company is running AI, satellite, and blockchain together across three continents, and most farmers on it have never touched crypto." },
+        { label: "What it is", time: "0:12\u20130:38", text: "Dimitra combines blockchain, AI, and satellite imagery into one platform for smallholder farmers. In Libya, it's running on 520 farms under a government project, reading soil pH and spotting pests through sensors and satellite data. Every reading gets logged where nobody can quietly edit it later." },
+        { label: "How it scales", time: "0:38\u20131:00", text: "In Kenya, they don't rely on the app alone. They train 'digital champions,' local people who onboard about ten farmers a day, aiming for one million farmers by the end of this year. In Brazil, they're helping fruit exporters, who ship about 80% of the country's fresh fruit abroad, prove they meet new EU deforestation rules." },
+        { label: "Honest close", time: "1:00\u20131:25", text: "There's a crypto token attached to this, DMTR, worth watching carefully, since token-based agtech has a mixed track record. But the underlying split, AI and satellite generating the data, blockchain just making sure it isn't tampered with, is genuinely useful. The farmer doesn't need to know or care what's happening underneath." }
+      ],
+      altCut: {
+        label: "30-second cut",
+        text: "Dimitra runs AI, satellite imagery, and blockchain together across Libya, Kenya, and Brazil. In Libya, it reads soil and pests across 520 farms. In Kenya, local 'digital champions' are onboarding toward a million farmers. In Brazil, it's helping exporters prove they meet EU deforestation rules. One company, three continents, and most farmers on it never touch crypto directly."
+      },
+      overlays: [
+        { time: "0:00", text: "One platform, three continents" },
+        { time: "0:38", text: "Kenya target: 1 million farmers by year end" },
+        { time: "1:00", text: "Runs its own token, DMTR \u2014 watch the incentives" }
+      ],
+      sourcesNote: "iGrow News interview with Dimitra CEO Jon Trask (April 2026). Libya Herald, on the AI-ASA project agreement with Libya's Ministry of Agriculture and Livestock. Dimitra's own \u2018About Us\u2019 and \u2018Platform Overview\u2019 pages (2026).",
+      meta: "~85 sec script \u00b7 scripted Sep 2, 2026",
+      link: "scripts/episode-9-dimitra.md",
+      linkLabel: "Raw .md \u2192"
+    },
+    {
+      id: "ep-10-blockchain-decision",
+      category: "scripts",
+      title: "Do You Even Need a Blockchain?",
+      tags: ["episode", "script", "skeptic", "credibility"],
+      episodeNumber: 10,
+      status: "Scripted",
+      duration: "~85 sec",
+      dateLabel: "Scripted Sep 2, 2026",
+      hook: "Before you put anything on a blockchain, ask one question first: is there already someone everyone trusts to just run a normal database? If yes, stop. You don't need this.",
+      body: "Skeptic/credibility episode built around the real academic decision tree behind almost every 'blockchain decision flowchart' online: W\u00fcst and Gervais, ETH Zurich, 2017/2018. Applies the three-question test to FARMS (passes) versus a typical single-company sensor pitch (fails at question one).",
+      segments: [
+        { label: "Hook", time: "0:00\u20130:12", text: "Before you put anything on a blockchain, ask one question first: is there already someone everyone trusts to just run a normal database? If yes, stop. You don't need this." },
+        { label: "The real framework", time: "0:12\u20130:45", text: "Two researchers at ETH Zurich, Karl W\u00fcst and Arthur Gervais, built the actual decision tree most of this industry quietly copies. It comes down to three questions: do multiple parties need to write to the same record without one of them being in charge? Do you need that history to be impossible to secretly alter? And is there truly no trusted party everyone would already agree to use instead? Answer yes to all three, and a blockchain might actually help." },
+        { label: "Why this matters here", time: "0:45\u20131:10", text: "Most agri-blockchain pitches fail this test at question one. If it's one company's sensors feeding one company's database, that's not a multi-party trust problem, that's just a database with extra steps. FARMS, a few episodes back, passes all three: a farmer, an insurer, and a satellite provider don't fully trust each other's numbers." },
+        { label: "Close", time: "1:10\u20131:25", text: "This isn't an argument against the tech. It's the filter that separates a project like FARMS from a marketing deck. Ask the three questions before you believe the pitch." }
+      ],
+      altCut: {
+        label: "30-second cut",
+        text: "Before believing any blockchain pitch, ask three questions from an actual academic decision tree, built at ETH Zurich: do multiple untrusting parties need to write to the same record, do you need that history tamper-proof, and is there truly no trusted third party everyone would already accept instead? Most agri-blockchain pitches fail at question one. FARMS passes all three. That's the difference between a real use case and a marketing deck."
+      },
+      overlays: [
+        { time: "0:00", text: "Is there already a trusted party to run a database?" },
+        { time: "0:12", text: "3 questions, from an actual academic decision tree" },
+        { time: "1:10", text: "The filter between a real project and a marketing deck" }
+      ],
+      sourcesNote: "Karl W\u00fcst and Arthur Gervais, \u2018Do you Need a Blockchain?\u2019, IACR Cryptology ePrint Archive 2017/375, ETH Zurich, presented at IEEE CVCBT 2018 \u2014 the actual source behind nearly every blockchain decision flowchart circulating online. Same source now correcting the ledger's risk-category entry, previously misattributed to the US Department of Homeland Security.",
+      meta: "~85 sec script \u00b7 scripted Sep 2, 2026",
+      link: "scripts/episode-10-blockchain-decision.md",
       linkLabel: "Raw .md \u2192"
     },
 
