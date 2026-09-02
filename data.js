@@ -63,6 +63,8 @@ window.LEDGER_DATA = {
     { id: "the-seam", category: "global", title: "The Seam \u00d7 IBM", tags: ["cotton", "consortium"], body: "Cotton-industry blockchain consortium backing a $7bn+ commodities trading platform. Owners include Cargill, Louis Dreyfus, and Olam.", meta: "US-based, global cotton trade" },
     { id: "chromaway", category: "global", title: "ChromaWay", tags: ["land titles", "Sweden"], body: "Land-title registry pilot with Lantm\u00e4teriet, Sweden\u2019s land authority \u2014 a useful comparison case for the African land-documentation problem.", meta: "Sweden" },
     { id: "factom", category: "global", title: "Factom", tags: ["land titles", "Honduras"], body: "Ran a 2015 land-title blockchain pilot with the Honduran government to fight registry fraud.", meta: "Honduras, 2015" },
+    { id: "cellulant-agrikore", category: "global", title: "Cellulant Agrikore", tags: ["Nigeria", "marketplace", "financing"], body: "Blockchain-based agricultural marketplace and payment platform built by Nigerian fintech Cellulant. Reported to have served more than 7 million farmers across the continent, backed by a $47.5M raise from TPG Growth's Rise Fund and a signed N2 billion loan facility for Nigerian farmers routed through NIRSAL. Farmer produce serves as its own collateral, with transactions recorded on smart contracts.", meta: "Nigeria, active since 2018" },
+    { id: "dimitra-co", category: "global", title: "Dimitra", tags: ["AI", "satellite", "smallholders"], body: "Global agtech company combining blockchain, AI, and satellite imagery for smallholder farmers. Active in Libya (520 farms under a government AI-ASA project), Kenya (targeting 1 million farmers by year end through community-based digital champions), and Latin America (helping Brazilian fruit exporters meet EU deforestation rules). Runs its own token, DMTR.", meta: "Global, CEO Jon Trask" },
 
     // ---------- WORKED CASE STUDIES ----------
     {
@@ -112,8 +114,9 @@ window.LEDGER_DATA = {
     { id: "ethereum-kenya-insurance", category: "africa", title: "Ethereum Foundation crop insurance \u2014 Kenya", tags: ["Kenya", "parametric insurance"], body: "Blockchain-based parametric crop insurance covering roughly 17,000 Kenyan farmers.", meta: "Kenya" },
     { id: "houseafrica", category: "africa", title: "HouseAfrica", tags: ["land documentation", "satellite"], body: "African proptech using satellite data plus blockchain for land documentation \u2014 relevant background for why agri-blockchain finance struggles to scale (only ~10% of Sub-Saharan African land is formally documented).", meta: "Africa" },
     { id: "cngn-refi-dao", category: "africa", title: "cNGN stablecoin / ReFi DAO Africa", tags: ["Nigeria", "land tokenization", "financial inclusion"], body: "Explores blockchain-backed land tokenization and farmer financial inclusion routed through a Naira-pegged stablecoin.", meta: "Nigeria" },
-    { id: "ng-gov-2026", category: "africa", title: "Nigerian government AI + blockchain push", tags: ["Nigeria", "policy", "2026"], body: "As of mid-2026 the Ministry of Agriculture and Food Security has publicly called for AI, blockchain, and smart-logistics adoption across African agriculture \u2014 a useful \u201cpolicy angle\u201d hook.", meta: "Nigeria, 2026" },
+    { id: "ng-gov-2026", category: "africa", title: "Nigerian government AI + blockchain push", tags: ["Nigeria", "policy", "2026"], body: "In July 2026, Dr. Marcus Ogunbiyi, Permanent Secretary of Nigeria's Federal Ministry of Agriculture and Food Security, publicly urged African governments to combine AI, blockchain, and smart logistics to cut post-harvest losses and modernize agriculture. He made the call at the Africa Procurement and Supply Chain Summit and Awards 2026 in Lagos.", meta: "Nigeria, July 29 2026, per CoinTrust" },
     { id: "bitland-benben", category: "africa", title: "BitLand / BenBen (Ghana)", tags: ["Ghana", "land titles"], body: "Two independent Ghanaian startups using blockchain to manage land titles and resolve disputes, working with local land-title institutions. Good comparison case for the land-documentation angle.", meta: "Ghana" },
+    { id: "innovate-africa-2026", category: "africa", title: "FAO x Smart Africa: Innovate Africa Challenge 2026", tags: ["AI", "Kenya", "Ghana", "Rwanda", "Uganda", "Malawi"], body: "Third edition of a joint FAO and Smart Africa program offering $50,000 to move an AI farming tool from pilot into real deployment across five countries: Kenya, Ghana, Rwanda, Uganda, and Malawi. Application deadline was August 31, 2026, with selections expected in September. Priority areas include precision agriculture, crop-yield prediction, and pest and disease early warning.", meta: "Africa, 2026, per Tech In Africa" },
 
     // ---------- REFI & CARBON ----------
     { id: "gainforest", category: "refi", title: "GainForest", tags: ["Solana", "reforestation", "Indigenous communities"], body: "ReFi project paying Indigenous communities for forest stewardship and reforestation.", meta: "Built on Solana" },
@@ -144,6 +147,7 @@ window.LEDGER_DATA = {
 
     // ---------- MARKET SIZING ----------
     { id: "market-disagreement", category: "market", title: "Vendors disagree by 5x \u2014 and that\u2019s the story", tags: ["market size", "skepticism"], body: "Market-research firms currently size the global blockchain-in-agri-food-supply-chain market anywhere from ~$250M to ~$1.3B for 2025/26, projecting to $16B\u2013$27B by 2032\u201335 at 21\u201337% CAGR depending on methodology. Treat any single number as directional, not authoritative \u2014 GII Research, InsightAce, and MarketGrowthReports disagree by 5x, which is itself a lesson worth putting on camera about how immature and hyped this market still is.", meta: "GII Research / InsightAce / MarketGrowthReports" },
+    { id: "afbf-blockchain-2026", category: "market", title: "American Farm Bureau Federation on blockchain", tags: ["US", "mainstream", "policy"], body: "In August 2026, AFBF economist Bernt Nelson published an analysis for the largest US farm organization examining blockchain's use in agriculture beyond cryptocurrency: asset ownership, supply-chain management, traceability, and smart-contract-based financing. A signal that blockchain-in-agriculture is reaching mainstream US farm policy circles, not just crypto or African fintech spaces.", meta: "US, August 20 2026, per RFD-TV" },
 
     // ---------- SCRIPTS & EPISODES ----------
     {
@@ -356,6 +360,37 @@ window.LEDGER_DATA = {
       sourcesNote: "FAO/ITU \u201cE-Agriculture in Action: Blockchain for Agriculture\u201d (2019), \u201cBlockchain demystified\u201d chapter \u2014 on hardware/software/consensus-based oracles and how consensus oracles cross-check multiple sources. Same source that grounded the oracle framing in Episode 3. FARMS Kenya reference pulls from the case study already logged under Worked Case Studies.",
       meta: "~85 sec script \u00b7 scripted Aug 7, 2026",
       link: "scripts/episode-7-answering-comments.md",
+      linkLabel: "Raw .md \u2192"
+    },
+    {
+      id: "ep-8-first-grain-sale",
+      category: "scripts",
+      title: "The First Blockchain Grain Sale, Ten Years Later",
+      tags: ["episode", "script", "AgriDigital", "narrative", "Australia"],
+      episodeNumber: 8,
+      status: "Scripted",
+      duration: "~85 sec",
+      dateLabel: "Scripted Sep 2, 2026",
+      hook: "December 2016. A farmer in Australia delivers a truck of wheat. The second it hits the scale, he's paid. Not next week. Not after an invoice clears. That second.",
+      body: "Full narrative telling of the AgriDigital story already logged under Worked Case Studies (idea-7 from the ledger), plus a real update on what happened to the company since: still operating in 2026, fresh funding, real revenue, but blockchain is no longer the pitch, it's one feature folded into a bigger grain platform. A rare episode where the honest-gap section gets a real answer instead of an open question.",
+      segments: [
+        { label: "Hook", time: "0:00\u20130:12", text: "December 2016. A farmer in Australia delivers a truck of wheat. The second it hits the scale, he's paid. Not next week. Not after an invoice clears. That second." },
+        { label: "The mechanism", time: "0:12\u20130:38", text: "Grower David Whillock delivered 23.46 metric tons of wheat to a buyer in Dubbo, New South Wales. A smart contract, running on a private Ethereum instance built by a two-year-old startup called AgriDigital, triggered payment and title transfer at the same moment the grain was weighed. Normally a farmer delivers first and waits, sometimes weeks, exposed the whole time if the buyer can't pay. This closed that gap to zero." },
+        { label: "Did it scale?", time: "0:38\u20131:05", text: "It wasn't a one-off. In 2017, AgriDigital ran a pilot with CBH Group, Australia's largest grain exporter, at one of its mills. That December, Rabobank tested a three-party financing deal settled the same way. By 2019, the platform had roughly 1,300 active users and had processed over 1.6 million metric tons of grain." },
+        { label: "What happened after", time: "1:05\u20131:25", text: "Ten years on, AgriDigital is still running. It closed a fresh 25 million dollar funding round and pulls in real revenue every year. But blockchain isn't the pitch anymore. It's one feature folded into a bigger grain management platform. That's not failure. That's what happens when new tech actually works: it stops being the headline and becomes the plumbing." }
+      ],
+      altCut: {
+        label: "30-second cut",
+        text: "December 2016: a farmer in Australia gets paid the second his wheat hits the scale, through a smart contract built by a startup called AgriDigital, the world's first blockchain settlement of a physical commodity. By 2019 it had processed over 1.6 million metric tons of grain. Ten years later, the company's still running. Blockchain's just not the headline anymore. It's the plumbing."
+      },
+      overlays: [
+        { time: "0:00", text: "Dec 2016: first blockchain grain settlement" },
+        { time: "0:38", text: "1,300+ users, 1.6M+ tonnes by 2019" },
+        { time: "1:05", text: "2026: still running, blockchain now one feature of many" }
+      ],
+      sourcesNote: "FAO/ITU \u201cBlockchain for Agriculture\u201d (2019), AgriDigital chapter (Bridie Ohlsson) \u2014 same case study already logged under Worked Case Studies, for the founding story and 2019 usage numbers. Company status as of 2025/2026 (funding round, revenue, current product positioning) per Tracxn and Growjo company profiles.",
+      meta: "~85 sec script \u00b7 scripted Sep 2, 2026",
+      link: "scripts/episode-8-first-grain-sale.md",
       linkLabel: "Raw .md \u2192"
     },
 
