@@ -22,9 +22,14 @@
       ? `<a class="watch-btn" href="${ep.videoUrl}" target="_blank" rel="noopener">Watch &rarr;</a>`
       : `<span class="watch-btn watch-btn--pending">Link coming soon</span>`;
 
+    const thumbImg = ep.thumbnailUrl
+      ? `<img class="watch-thumb-img" src="${ep.thumbnailUrl}" alt="" loading="lazy">`
+      : '';
+
     return `
       <article class="watch-card">
         <a class="watch-thumb" href="${ep.videoUrl || '#'}" ${ep.videoUrl ? 'target="_blank" rel="noopener"' : 'tabindex="-1" aria-hidden="true"'}>
+          ${thumbImg}
           <span class="ep-num">EP ${ep.episodeNumber}</span>
           <span class="watch-play">${playIcon}</span>
         </a>
