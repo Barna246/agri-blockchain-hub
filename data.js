@@ -485,6 +485,37 @@ window.LEDGER_DATA = {
       link: "scripts/episode-11-fao-innovate-africa.md",
       linkLabel: "Raw .md \u2192"
     },
+    {
+      id: "ep-12-superteam-microgrants",
+      category: "scripts",
+      title: "Free Money for Solana Builders, No Pitch Deck Required",
+      tags: ["episode", "script", "Solana", "funding", "opportunity"],
+      episodeNumber: 12,
+      status: "Scripted",
+      duration: "~80 sec",
+      dateLabel: "Scripted Sep 13, 2026",
+      hook: "If you're building anything on Solana, including agriculture tools, there's up to ten thousand dollars sitting in a program you've probably never opened.",
+      body: "Opportunity episode on Superteam Earn's rolling microgrant program, $0-$10,000 in USDC for early-stage Solana builders in emerging markets, no fixed deadline. Personally connected: the presenter is SuperteamNG's Ogun State Moderator.",
+      segments: [
+        { label: "Hook", time: "0:00\u20130:12", text: "If you're building anything on Solana, including agriculture tools, there's up to ten thousand dollars sitting in a program you've probably never opened." },
+        { label: "What it is", time: "0:12\u20130:35", text: "It's called Superteam Earn, and unlike most grant programs, it isn't a once-a-year competition. It's a rolling platform: microgrants from zero to ten thousand dollars in USDC, aimed specifically at early-stage builders in emerging markets, including Africa. No pitch deck marathon, no annual deadline to miss." },
+        { label: "Why I'm covering this specifically", time: "0:35\u20131:00", text: "I'm SuperteamNG's Ogun State Moderator, so I've watched this ecosystem from the inside. Most people building agri-tech in Nigeria have never even opened Superteam Earn, because they don't think of themselves as 'Web3 builders.' If your tool touches Solana at any layer, payments, data logging, tokenized assets, you qualify to look." },
+        { label: "Close", time: "1:00\u20131:20", text: "This isn't a one-time application window like the other funding episodes I've covered. It's open right now, and it'll still be open next month. Check Superteam Earn's own platform for live listings before you assume you're not eligible." }
+      ],
+      altCut: {
+        label: "30-second cut",
+        text: "Superteam Earn runs rolling microgrants, zero to ten thousand dollars in USDC, for early-stage Solana builders in emerging markets, no annual deadline. As SuperteamNG's Ogun State Moderator, I can tell you most agri-tech builders in Nigeria have never opened this platform. If your tool touches Solana anywhere, it's worth a look."
+      },
+      overlays: [
+        { time: "0:00", text: "$0\u2013$10,000 in USDC, rolling, no deadline" },
+        { time: "0:35", text: "Personal note: I moderate SuperteamNG's Ogun State chapter" },
+        { time: "1:00", text: "Check earn.superteam.fun for live listings" }
+      ],
+      sourcesNote: "Solana's own official grants page (solana.org/grants-funding), confirming Superteam's microgrant model for emerging-market builders. Superteam's own platform (earn.superteam.fun), showing live microgrant listings such as the ALLMIGHT Microgrants Program ($0\u2013$10,000 USDC).",
+      meta: "~80 sec script \u00b7 scripted Sep 13, 2026",
+      link: "scripts/episode-12-superteam-microgrants.md",
+      linkLabel: "Raw .md \u2192"
+    },
 
     // ---------- CONTENT IDEAS ----------
     { id: "idea-1", category: "idea", title: "What blockchain in agriculture actually solves", tags: ["episode idea"], body: "Trust, payment delay, and traceability \u2014 explained through AgriDigital or TE-FOOD as concrete cases, not hype.", meta: "Episode idea" },
