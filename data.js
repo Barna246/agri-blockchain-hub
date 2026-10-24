@@ -16,7 +16,8 @@ window.LEDGER_DATA = {
     { id: "people",   label: "People & Orgs",   accent: "shoot" },
     { id: "market",   label: "Market Sizing",   accent: "rust" },
     { id: "idea",     label: "Content Ideas",   accent: "wheat" },
-    { id: "scripts",  label: "Scripts & Episodes", accent: "shoot" }
+    { id: "scripts",  label: "Scripts & Episodes", accent: "shoot" },
+    { id: "events",   label: "Events & Talks",  accent: "wheat" }
   ],
 
   entries: [
@@ -548,7 +549,8 @@ window.LEDGER_DATA = {
     { id: "idea-7", category: "idea", title: "The first blockchain grain sale, told as a story", tags: ["episode idea", "narrative"], body: "AgriDigital and Fletcher International Exports: farmer delivers wheat, gets paid the instant title transfers, no five-week wait. Concrete, human, easy to visualize.", meta: "Episode idea" },
     { id: "idea-8", category: "idea", title: "\u201cDo you even need a blockchain?\u201d", tags: ["episode idea", "credibility"], body: "Walk through the DHS decision flowchart on screen. Positions you as someone who understands the tech\u2019s real limits, not just its hype.", meta: "Episode idea" },
     { id: "idea-9", category: "idea", title: "FARMS: savings, not insurance", tags: ["episode idea", "Kenya"], body: "Why a savings product beat an insurance product for smallholder trust and adoption in Kenya. Under-covered, nuanced angle.", meta: "Episode idea" },
-    { id: "idea-10", category: "idea", title: "WFP Jordan cost-savings breakdown", tags: ["episode idea", "humanitarian"], body: "Not agriculture exactly, but the mechanism \u2014 blockchain cutting out costly intermediaries \u2014 is identical to what agri-supply-chain projects promise, and the dollar figures are concrete and verifiable.", meta: "Episode idea" }
+    { id: "idea-10", category: "idea", title: "WFP Jordan cost-savings breakdown", tags: ["episode idea", "humanitarian"], body: "Not agriculture exactly, but the mechanism \u2014 blockchain cutting out costly intermediaries \u2014 is identical to what agri-supply-chain projects promise, and the dollar figures are concrete and verifiable.", meta: "Episode idea" },
+    { id: "event-viverst-agro-2026-10-24", category: "events", title: "Reimagining Agriculture in the Digital Economy (VIVERST AGRO webinar)", tags: ["webinar", "speaker", "AI in agriculture", "Nigeria"], body: "Barnabas Omoniwa (SirBarna), Agriculture X Blockchain Researcher, speaks alongside host David Ogunsola. The session covers technology and AI in agriculture, digital innovation across the value chain, marketing and social media for agribusiness, and funding opportunities in Nigeria. Live on Zoho.", meta: "Saturday 24 October 2026, 6:00 PM WAT, virtual", link: "https://viverst.com/events", linkLabel: "Register at viverst.com/events \u2192" }
   ],
 
   changelog: [
@@ -562,6 +564,7 @@ window.LEDGER_DATA = {
     { date: "2026-08-07", note: "Added Episodes 3-5, all capped under 90 seconds per new format direction. Ep 3 (AI meets blockchain) and Ep 5 (fun episode: tokenized cows and CattleProof) are freshly researched, not just pulled from the existing ledger. Ep 4 repurposes the AgUnity case study already logged under Worked Case Studies into a tight human-story script. Added a \u201cScripted\u201d status distinct from \u201cPublished,\u201d since these haven\u2019t been filmed yet." },
     { date: "2026-08-07", note: "Added Episode 6: FARMS Kenya, the project teased at the end of Episode 2. Builds on the existing FARMS case study with fresh context, a sub-1% crop insurance adoption stat for Kenya and the underlying wallet's early reach, plus an honest note that there's no public update yet on how the actual pilot performed after its 2019 launch." },
     { date: "2026-08-07", note: "Added Episode 7: a response to a viewer's comment on Episode 3, asking what blockchain adds over a centralized database for AI farm data, and how immutability doesn't guarantee the underlying data was accurate (the oracle problem). First Q&A-format episode \u2014 a new content variant alongside explainer, deep dive, and fun." },
-    { date: "2026-08-07", note: "Rewrote Episode 5. The hook (fart NFT) and punchline were only connected by a single callback line at the very end, with 50 seconds of unrelated cow content in between. Restructured so the fart/cow contrast is stated up front and the whole script pays off one idea instead of two loosely stitched halves. Also corrected the loan figure from a rounded \u201ctwenty thousand\u201d to the precise $19,600." }
+    { date: "2026-08-07", note: "Rewrote Episode 5. The hook (fart NFT) and punchline were only connected by a single callback line at the very end, with 50 seconds of unrelated cow content in between. Restructured so the fart/cow contrast is stated up front and the whole script pays off one idea instead of two loosely stitched halves. Also corrected the loan figure from a rounded \u201ctwenty thousand\u201d to the precise $19,600." },
+    { date: "2026-10-24", note: "Added an Events & Talks category. First entry: the VIVERST AGRO webinar, Reimagining Agriculture in the Digital Economy, Saturday 24 October 2026, 6:00 PM WAT." }
   ]
 };
