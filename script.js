@@ -183,15 +183,16 @@
         card.appendChild(meta);
       }
 
-      if (entry.link) {
+      var linkList = entry.links || (entry.link ? [{ href: entry.link, label: entry.linkLabel }] : []);
+      linkList.forEach(function (l) {
         var linkEl = document.createElement("a");
         linkEl.className = "card-link";
-        linkEl.href = entry.link;
+        linkEl.href = l.href;
         linkEl.target = "_blank";
         linkEl.rel = "noopener noreferrer";
-        linkEl.textContent = entry.linkLabel || "Open \u2192";
+        linkEl.textContent = l.label || "Open \u2192";
         card.appendChild(linkEl);
-      }
+      });
 
       boardEl.appendChild(card);
     });
