@@ -1,0 +1,193 @@
+[
+  {
+    "id": "fao",
+    "name": "FAO Newsroom",
+    "type": "Primary institution",
+    "website": "https://www.fao.org/newsroom/",
+    "feedUrl": "https://www.fao.org/feeds/fao-newsroom-rss",
+    "topics": [
+      "Agriculture & food systems"
+    ],
+    "region": "Global",
+    "checkedOn": "2026-11-03",
+    "mode": "Automatic RSS"
+  },
+  {
+    "id": "cabi",
+    "name": "CABI Blog",
+    "type": "Research organisation blog",
+    "website": "https://blog.cabi.org/",
+    "feedUrl": "https://blog.cabi.org/feed/",
+    "topics": [
+      "Research & learning"
+    ],
+    "region": "Global / Africa",
+    "checkedOn": "2026-11-03",
+    "mode": "Automatic RSS"
+  },
+  {
+    "id": "agfunder",
+    "name": "AgFunderNews",
+    "type": "Trade journalism",
+    "website": "https://agfundernews.com/",
+    "feedUrl": "https://agfundernews.com/feed",
+    "topics": [
+      "AgTech & innovation"
+    ],
+    "region": "Global",
+    "checkedOn": "2026-11-03",
+    "mode": "Automatic RSS"
+  },
+  {
+    "id": "modernfarmer",
+    "name": "Modern Farmer",
+    "type": "Magazine / journalism",
+    "website": "https://modernfarmer.com/",
+    "feedUrl": "https://modernfarmer.com/feed/",
+    "topics": [
+      "Agriculture & food systems"
+    ],
+    "region": "Global / North America",
+    "checkedOn": "2026-11-03",
+    "mode": "Automatic RSS"
+  },
+  {
+    "id": "carbonbrief",
+    "name": "Carbon Brief",
+    "type": "Climate journalism",
+    "website": "https://www.carbonbrief.org/",
+    "feedUrl": "https://www.carbonbrief.org/feed/",
+    "topics": [
+      "Weather & climate"
+    ],
+    "region": "Global",
+    "checkedOn": "2026-11-03",
+    "mode": "Automatic RSS"
+  },
+  {
+    "id": "cimmyt",
+    "name": "CIMMYT",
+    "type": "Primary research organisation",
+    "website": "https://www.cimmyt.org/",
+    "feedUrl": "https://www.cimmyt.org/feed/",
+    "topics": [
+      "Research & learning"
+    ],
+    "region": "Global",
+    "checkedOn": "2026-11-03",
+    "mode": "Automatic RSS"
+  },
+  {
+    "id": "igrow",
+    "name": "iGrow News",
+    "type": "Trade journalism",
+    "website": "https://igrownews.com/",
+    "feedUrl": "https://igrownews.com/feed/",
+    "topics": [
+      "AgTech & innovation"
+    ],
+    "region": "Global",
+    "checkedOn": "2026-11-03",
+    "mode": "Automatic RSS"
+  },
+  {
+    "id": "wmo",
+    "name": "WMO",
+    "type": "Official weather / climate institution",
+    "website": "https://public.wmo.int/media/news",
+    "feedUrl": null,
+    "topics": [
+      "Weather & climate"
+    ],
+    "region": "Global",
+    "checkedOn": "2026-11-03",
+    "mode": "Reference page",
+    "note": "Open the publisher for its latest dated material. Not automatically ingested."
+  },
+  {
+    "id": "icpac",
+    "name": "ICPAC Climate Monitoring",
+    "type": "Official regional climate centre",
+    "website": "https://www.icpac.net/climate-monitoring/",
+    "feedUrl": null,
+    "topics": [
+      "Weather & climate"
+    ],
+    "region": "Greater Horn of Africa",
+    "checkedOn": "2026-11-03",
+    "mode": "Reference page",
+    "note": "Open the publisher for its latest dated material. Not automatically ingested."
+  },
+  {
+    "id": "giews",
+    "name": "FAO GIEWS Nigeria",
+    "type": "Official country monitoring",
+    "website": "https://www.fao.org/giews/countrybrief/country.jsp?code=NGA",
+    "feedUrl": null,
+    "topics": [
+      "Africa & Nigeria"
+    ],
+    "region": "Nigeria",
+    "checkedOn": "2026-11-03",
+    "mode": "Reference page",
+    "note": "Open the publisher for its latest dated material. Not automatically ingested."
+  },
+  {
+    "id": "cgiar",
+    "name": "CGIAR",
+    "type": "Primary research network",
+    "website": "https://www.cgiar.org/news-events",
+    "feedUrl": null,
+    "topics": [
+      "Research & learning"
+    ],
+    "region": "Global / Africa",
+    "checkedOn": "2026-11-03",
+    "mode": "Reference page",
+    "note": "Open the publisher for its latest dated material. Not automatically ingested."
+  },
+  {
+    "id": "fao-climate",
+    "name": "FAO Climate Change",
+    "type": "Primary institution",
+    "website": "https://www.fao.org/climate-change/news",
+    "feedUrl": null,
+    "topics": [
+      "Weather & climate"
+    ],
+    "region": "Global",
+    "checkedOn": "2026-11-03",
+    "mode": "Reference page",
+    "note": "Open the publisher for its latest dated material. Not automatically ingested."
+  },
+  {
+    "id": "fao-digital",
+    "name": "FAO e-Agriculture",
+    "type": "Primary institution / learning",
+    "website": "https://www.fao.org/e-agriculture/",
+    "feedUrl": null,
+    "topics": [
+      "AgTech & innovation",
+      "Research & learning"
+    ],
+    "region": "Global",
+    "checkedOn": "2026-11-03",
+    "mode": "Reference page",
+    "note": "Open the publisher for its latest dated material. Not automatically ingested."
+  },
+  {
+    "id": "iita",
+    "name": "IITA",
+    "type": "Primary research organisation",
+    "website": "https://www.iita.org/",
+    "feedUrl": null,
+    "topics": [
+      "Africa & Nigeria",
+      "Research & learning"
+    ],
+    "region": "Africa",
+    "checkedOn": "2026-11-03",
+    "mode": "Reference page",
+    "note": "Open the publisher for its latest dated material. Not automatically ingested."
+  }
+]

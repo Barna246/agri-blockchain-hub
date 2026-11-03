@@ -1,0 +1,123 @@
+[
+  {
+    "title": "Exedy Drones enters race to build American-made spray drones amid supply crunch",
+    "sourceId": "agfunder",
+    "link": "https://agfundernews.com/exedy-drones-opens-reservations-amid-us-spray-drone-shakeup",
+    "publishedAt": "2026-11-02",
+    "topics": [
+      "AgTech & innovation"
+    ],
+    "note": "Reporting on a proposed product launch; delivery targets are company statements, not completed deployment.",
+    "id": "reviewed-1",
+    "datePrecision": "day",
+    "curated": true,
+    "checkedOn": "2026-11-03"
+  },
+  {
+    "title": "Amatera tackles plant breeding bottleneck with high-throughput cell screening platform",
+    "sourceId": "agfunder",
+    "link": "https://agfundernews.com/%F0%9F%8E%A5-amatera-tackles-plant-breeding-bottleneck-with-high-throughput-cell-screening-platform",
+    "publishedAt": "2026-10-28",
+    "topics": [
+      "AgTech & innovation",
+      "Research & learning"
+    ],
+    "note": "Interview with the company. Publisher discloses its parent company is an investor. Performance claims need independent validation.",
+    "id": "reviewed-2",
+    "datePrecision": "day",
+    "curated": true,
+    "checkedOn": "2026-11-03"
+  },
+  {
+    "title": "From innovations to impact: CGIAR Scaling Fund selects eight promising innovations",
+    "sourceId": "cgiar",
+    "link": "https://www.cgiar.org/news-events/news/innovations-impact-cgiar-scaling-fund-selects-eight-promising-innovations",
+    "publishedAt": "2026-10-29",
+    "topics": [
+      "Research & learning",
+      "Africa & Nigeria"
+    ],
+    "note": "Research organisation announcement; funding selection is not proof of impact at scale.",
+    "id": "reviewed-3",
+    "datePrecision": "day",
+    "curated": true,
+    "checkedOn": "2026-11-03"
+  },
+  {
+    "title": "Adaptive agriculture information factories: climate and market decision support",
+    "sourceId": "cabi",
+    "link": "https://blog.cabi.org/2026/10/22/adaptive-agriculture-information-factories-to-help-farmers-and-value-chains-navigate-climate-and-market-change/",
+    "publishedAt": "2026-10-22",
+    "topics": [
+      "AgTech & innovation",
+      "Weather & climate",
+      "Africa & Nigeria"
+    ],
+    "note": "Project blog on combining Earth observation, climate and advisory data, including a Kenya maize use case.",
+    "id": "reviewed-4",
+    "datePrecision": "day",
+    "curated": true,
+    "checkedOn": "2026-11-03"
+  },
+  {
+    "title": "How Indian Farmers Use Weather Forecasts to Plan Weeks Ahead",
+    "sourceId": "wmo",
+    "link": "https://public.wmo.int/resources/meteoworld/meteoworld-october-2026/how-indian-farmers-use-weather-forecasts-plan-weeks-ahead",
+    "publishedAt": "2026-10-16",
+    "topics": [
+      "Weather & climate",
+      "Research & learning"
+    ],
+    "note": "Examples of crop-specific advisory services that combine forecasts with field conditions; not a forecast for your farm.",
+    "id": "reviewed-5",
+    "datePrecision": "day",
+    "curated": true,
+    "checkedOn": "2026-11-03"
+  },
+  {
+    "title": "El Niño looms large on World Food Day",
+    "sourceId": "wmo",
+    "link": "https://public.wmo.int/media/news/el-nino-looms-large-world-food-day",
+    "publishedAt": "2026-10-16",
+    "topics": [
+      "Weather & climate",
+      "Agriculture & food systems"
+    ],
+    "note": "Dated global climate context. Impacts vary by region and season; consult the latest local official forecast.",
+    "id": "reviewed-6",
+    "datePrecision": "day",
+    "curated": true,
+    "checkedOn": "2026-11-03"
+  },
+  {
+    "title": "Extreme heat pushes agrifood systems to the brink",
+    "sourceId": "wmo",
+    "link": "https://public.wmo.int/media/news/extreme-heat-pushes-agrifood-systems-brink",
+    "publishedAt": "2026-04-22",
+    "topics": [
+      "Weather & climate",
+      "Research & learning"
+    ],
+    "note": "FAO–WMO report announcement covering heat risks to agriculture and adaptation. Page updated 24 April; original publication is 22 April.",
+    "id": "reviewed-7",
+    "datePrecision": "day",
+    "curated": true,
+    "checkedOn": "2026-11-03"
+  },
+  {
+    "title": "Nigeria: GIEWS country brief",
+    "sourceId": "giews",
+    "link": "https://www.fao.org/giews/countrybrief/country.jsp?code=NGA",
+    "publishedAt": "2026-09-16",
+    "topics": [
+      "Africa & Nigeria",
+      "Weather & climate",
+      "Agriculture & food systems"
+    ],
+    "note": "Reference date 16 September 2026 at review. The source URL is a rolling country page and may later show a newer edition.",
+    "id": "reviewed-8",
+    "datePrecision": "day",
+    "curated": true,
+    "checkedOn": "2026-11-03"
+  }
+]

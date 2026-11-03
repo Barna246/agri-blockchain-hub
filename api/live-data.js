@@ -151,10 +151,9 @@ async function fetchNews() {
 }
 
 module.exports = async function handler(req, res) {
-  const [crypto, stocks, news] = await Promise.all([
+  const [crypto, stocks] = await Promise.all([
     fetchCrypto().catch(() => []),
-    fetchStocks().catch(() => []),
-    fetchNews().catch(() => [])
+    fetchStocks().catch(() => [])
   ]);
 
   res.setHeader(
@@ -165,6 +164,6 @@ module.exports = async function handler(req, res) {
     updatedAt: new Date().toISOString(),
     crypto,
     stocks,
-    news
+    news: []
   });
 };

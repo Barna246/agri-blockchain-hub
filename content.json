@@ -1,5 +1,209 @@
 [
-  {"id":"start-fao-digital","category":"fundamentals","title":"Explore digital agriculture with FAO","body":"FAO’s e-Agriculture community shares discussion and resources about digital innovation in agriculture and rural development. Explore its resources and webinars to learn about the field beyond blockchain.","meta":"FAO · Resource page checked 2026-11-03","tags":["beginner","digital agriculture","learning"],"links":[{"href":"https://www.fao.org/e-agriculture/","label":"Explore FAO e-Agriculture"}]},
-  {"id":"start-digital-green","category":"fundamentals","title":"AI advisory in practice: Digital Green","body":"Digital Green describes FarmerChat as an AI assistant for farmers, with attention to local language and conditions. Explore its work as a starting point for asking how digital advisory tools are designed and evaluated.","meta":"Digital Green · Organisation page checked 2026-11-03","tags":["AI","advisory","beginner"],"links":[{"href":"https://www.digitalgreen.org/","label":"Explore Digital Green"}]},
-  {"id":"start-world-bank","category":"fundamentals","title":"Your first agriculture data investigation","body":"Choose a country and explore an agriculture indicator such as cereal yield or agricultural land in the World Bank’s Agriculture & Rural Development collection. Compare years, check units, and record missing values before drawing a conclusion.","meta":"World Bank · Resource page checked 2026-11-03","tags":["data","beginner","research"],"links":[{"href":"https://data.worldbank.org/topic/agriculture-and-rural-development","label":"Open the agriculture data collection"}]}
+  {
+    "id": "start-fao-digital",
+    "category": "fundamentals",
+    "title": "Explore digital agriculture with FAO",
+    "body": "FAO’s e-Agriculture community shares discussion and resources about digital innovation in agriculture and rural development. Explore its resources and webinars to learn about the field beyond blockchain.",
+    "meta": "FAO · Resource page checked 2026-11-03",
+    "tags": [
+      "beginner",
+      "digital agriculture",
+      "learning"
+    ],
+    "links": [
+      {
+        "href": "https://www.fao.org/e-agriculture/",
+        "label": "Explore FAO e-Agriculture"
+      }
+    ]
+  },
+  {
+    "id": "start-digital-green",
+    "category": "fundamentals",
+    "title": "AI advisory in practice: Digital Green",
+    "body": "Digital Green describes FarmerChat as an AI assistant for farmers, with attention to local language and conditions. Explore its work as a starting point for asking how digital advisory tools are designed and evaluated.",
+    "meta": "Digital Green · Organisation page checked 2026-11-03",
+    "tags": [
+      "AI",
+      "advisory",
+      "beginner"
+    ],
+    "links": [
+      {
+        "href": "https://www.digitalgreen.org/",
+        "label": "Explore Digital Green"
+      }
+    ]
+  },
+  {
+    "id": "start-world-bank",
+    "category": "fundamentals",
+    "title": "Your first agriculture data investigation",
+    "body": "Choose a country and explore an agriculture indicator such as cereal yield or agricultural land in the World Bank’s Agriculture & Rural Development collection. Compare years, check units, and record missing values before drawing a conclusion.",
+    "meta": "World Bank · Resource page checked 2026-11-03",
+    "tags": [
+      "data",
+      "beginner",
+      "research"
+    ],
+    "links": [
+      {
+        "href": "https://data.worldbank.org/topic/agriculture-and-rural-development",
+        "label": "Open the agriculture data collection"
+      }
+    ]
+  },
+  {
+    "id": "research-reviewed-1",
+    "category": "fundamentals",
+    "title": "Exedy Drones enters race to build American-made spray drones amid supply crunch",
+    "body": "Reporting on a proposed product launch; delivery targets are company statements, not completed deployment.",
+    "meta": "AgFunderNews · Published 2026-11-02 · Reviewed 2026-11-03",
+    "publishedAt": "2026-11-02",
+    "reviewedAt": "2026-11-03",
+    "tags": [
+      "AgTech & innovation"
+    ],
+    "links": [
+      {
+        "href": "https://agfundernews.com/exedy-drones-opens-reservations-amid-us-spray-drone-shakeup",
+        "label": "Read original publication"
+      }
+    ]
+  },
+  {
+    "id": "research-reviewed-2",
+    "category": "fundamentals",
+    "title": "Amatera tackles plant breeding bottleneck with high-throughput cell screening platform",
+    "body": "Interview with the company. Publisher discloses its parent company is an investor. Performance claims need independent validation.",
+    "meta": "AgFunderNews · Published 2026-10-28 · Reviewed 2026-11-03",
+    "publishedAt": "2026-10-28",
+    "reviewedAt": "2026-11-03",
+    "tags": [
+      "AgTech & innovation",
+      "Research & learning"
+    ],
+    "links": [
+      {
+        "href": "https://agfundernews.com/%F0%9F%8E%A5-amatera-tackles-plant-breeding-bottleneck-with-high-throughput-cell-screening-platform",
+        "label": "Read original publication"
+      }
+    ]
+  },
+  {
+    "id": "research-reviewed-3",
+    "category": "fundamentals",
+    "title": "From innovations to impact: CGIAR Scaling Fund selects eight promising innovations",
+    "body": "Research organisation announcement; funding selection is not proof of impact at scale.",
+    "meta": "CGIAR · Published 2026-10-29 · Reviewed 2026-11-03",
+    "publishedAt": "2026-10-29",
+    "reviewedAt": "2026-11-03",
+    "tags": [
+      "Research & learning",
+      "Africa & Nigeria"
+    ],
+    "links": [
+      {
+        "href": "https://www.cgiar.org/news-events/news/innovations-impact-cgiar-scaling-fund-selects-eight-promising-innovations",
+        "label": "Read original publication"
+      }
+    ]
+  },
+  {
+    "id": "research-reviewed-4",
+    "category": "fundamentals",
+    "title": "Adaptive agriculture information factories: climate and market decision support",
+    "body": "Project blog on combining Earth observation, climate and advisory data, including a Kenya maize use case.",
+    "meta": "CABI Blog · Published 2026-10-22 · Reviewed 2026-11-03",
+    "publishedAt": "2026-10-22",
+    "reviewedAt": "2026-11-03",
+    "tags": [
+      "AgTech & innovation",
+      "Weather & climate",
+      "Africa & Nigeria"
+    ],
+    "links": [
+      {
+        "href": "https://blog.cabi.org/2026/10/22/adaptive-agriculture-information-factories-to-help-farmers-and-value-chains-navigate-climate-and-market-change/",
+        "label": "Read original publication"
+      }
+    ]
+  },
+  {
+    "id": "research-reviewed-5",
+    "category": "fundamentals",
+    "title": "How Indian Farmers Use Weather Forecasts to Plan Weeks Ahead",
+    "body": "Examples of crop-specific advisory services that combine forecasts with field conditions; not a forecast for your farm.",
+    "meta": "WMO · Published 2026-10-16 · Reviewed 2026-11-03",
+    "publishedAt": "2026-10-16",
+    "reviewedAt": "2026-11-03",
+    "tags": [
+      "Weather & climate",
+      "Research & learning"
+    ],
+    "links": [
+      {
+        "href": "https://public.wmo.int/resources/meteoworld/meteoworld-october-2026/how-indian-farmers-use-weather-forecasts-plan-weeks-ahead",
+        "label": "Read original publication"
+      }
+    ]
+  },
+  {
+    "id": "research-reviewed-6",
+    "category": "fundamentals",
+    "title": "El Niño looms large on World Food Day",
+    "body": "Dated global climate context. Impacts vary by region and season; consult the latest local official forecast.",
+    "meta": "WMO · Published 2026-10-16 · Reviewed 2026-11-03",
+    "publishedAt": "2026-10-16",
+    "reviewedAt": "2026-11-03",
+    "tags": [
+      "Weather & climate",
+      "Agriculture & food systems"
+    ],
+    "links": [
+      {
+        "href": "https://public.wmo.int/media/news/el-nino-looms-large-world-food-day",
+        "label": "Read original publication"
+      }
+    ]
+  },
+  {
+    "id": "research-reviewed-7",
+    "category": "fundamentals",
+    "title": "Extreme heat pushes agrifood systems to the brink",
+    "body": "FAO–WMO report announcement covering heat risks to agriculture and adaptation. Page updated 24 April; original publication is 22 April.",
+    "meta": "WMO · Published 2026-04-22 · Reviewed 2026-11-03",
+    "publishedAt": "2026-04-22",
+    "reviewedAt": "2026-11-03",
+    "tags": [
+      "Weather & climate",
+      "Research & learning"
+    ],
+    "links": [
+      {
+        "href": "https://public.wmo.int/media/news/extreme-heat-pushes-agrifood-systems-brink",
+        "label": "Read original publication"
+      }
+    ]
+  },
+  {
+    "id": "research-reviewed-8",
+    "category": "fundamentals",
+    "title": "Nigeria: GIEWS country brief",
+    "body": "Reference date 16 September 2026 at review. The source URL is a rolling country page and may later show a newer edition.",
+    "meta": "FAO GIEWS Nigeria · Published 2026-09-16 · Reviewed 2026-11-03",
+    "publishedAt": "2026-09-16",
+    "reviewedAt": "2026-11-03",
+    "tags": [
+      "Africa & Nigeria",
+      "Weather & climate",
+      "Agriculture & food systems"
+    ],
+    "links": [
+      {
+        "href": "https://www.fao.org/giews/countrybrief/country.jsp?code=NGA",
+        "label": "Read original publication"
+      }
+    ]
+  }
 ]
