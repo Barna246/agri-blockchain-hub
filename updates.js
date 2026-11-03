@@ -10,8 +10,8 @@
     return instant(item.publishedAt) || 'Publication date not supplied / unconfirmed';
   }
   let data = { items: [], sources: [] }, limit = 12, busy = false, lastAttempt = 0, offline = false;
-  let good;
-  try { good = JSON.parse(localStorage.getItem('field-ledger-updates-v1')); } catch {}
+  let good, hasLive=false;
+  try { good = FieldLedgerData.snapshot(JSON.parse(localStorage.getItem('field-ledger-updates-v1'))); } catch {}
   function render() {
     const query = $('updateSearch').value.trim().toLowerCase();
     const topic = $('updateTopic').value, sourceId = $('updateSource').value, age = $('updateAge').value;
@@ -29,21 +29,15 @@
     $('updateSource').innerHTML = '<option value="">All publishers</option>' + data.sources.map(s => '<option value="' + esc(s.id) + '">' + esc(s.name) + '</option>').join('');
     $('updateSource').value = selected;
   }
-  try {
-    const [s, r] = await Promise.all([fetch('sources.json'), fetch('reviewed-updates.json')]);
-    data.sources = await s.json(); data.items = (await r.json()).sort((a, b) => (Date.parse(b.publishedAt) || 0) - (Date.parse(a.publishedAt) || 0));
-    if (good?.items?.length && good?.sources?.length) { data = good; offline = true; }
-    sourceOptions(); render();
-  } catch { $('updateStatus').textContent = 'Could not load the source directory.'; }
+  if(good){data=good;offline=true;sourceOptions();render();}
+  Promise.allSettled([FieldLedgerData.fetchJSON('sources.json'),FieldLedgerData.fetchJSON('reviewed-updates.json')]).then(results=>{if(hasLive||good)return;const sources=results[0].status==='fulfilled'?results[0].value:[],items=results[1].status==='fulfilled'?results[1].value:[];const checked=FieldLedgerData.snapshot({sources,items});if(checked){data=checked;sourceOptions();render();}});
   async function refresh() {
     if (busy || Date.now() - lastAttempt < 15000) return;
     busy = true; lastAttempt = Date.now(); $('refreshUpdates').disabled = true;
     $('updateStatus').textContent = 'Checking publisher feeds…';
     try {
-      const r = await fetch('/api/updates', { signal: AbortSignal.timeout(15000) });
-      if (!r.ok) throw Error('Updates endpoint unavailable');
-      const latest = await r.json();
-      if (!Array.isArray(latest.items) || !Array.isArray(latest.sources)) throw Error('Invalid updates response');
+      const latest = FieldLedgerData.snapshot(await FieldLedgerData.fetchJSON('/api/updates',15000));
+      if (!latest) throw Error('Invalid updates response');
       if (good?.items?.length) {
         const failedIds = new Set(latest.sources.filter(s => s.status === 'unavailable' || s.status === 'stale').map(s => s.id));
         const merged = new Map(latest.items.map(i => [i.link, i]));
@@ -51,9 +45,9 @@
         for (const source of latest.sources) if (failedIds.has(source.id) && !source.lastSuccessAt) source.lastSuccessAt = good.sources.find(s => s.id === source.id)?.lastSuccessAt || null;
         latest.items = [...merged.values()].sort((a, b) => (Date.parse(b.publishedAt) || 0) - (Date.parse(a.publishedAt) || 0));
       }
-      data = latest; offline = false;
+      data = latest; hasLive=true; offline = !latest.generatedAt || Date.now()-Date.parse(latest.generatedAt)>420000;
       if (latest.healthySources > 0) { good = latest; try { localStorage.setItem('field-ledger-updates-v1', JSON.stringify(latest)); } catch {} }
-      $('updateStatus').textContent = latest.healthySources + '/' + latest.automaticSources + ' feeds available · Collection checked ' + instant(latest.generatedAt) + ' · Checks every 5 minutes while visible; caching may add about 2 minutes.';
+      $('updateStatus').textContent = (offline?'Saved collection may be out of date · ':'') + latest.healthySources + '/' + latest.automaticSources + ' feeds available · Collection checked ' + instant(latest.generatedAt) + ' · Checks every 5 minutes while visible; caching may add about 2 minutes.';
       sourceOptions(); render();
     } catch {
       offline = true;
@@ -65,6 +59,7 @@
     }
   }
   for (const id of ['updateSearch', 'updateTopic', 'updateSource', 'updateAge']) $(id).addEventListener(id === 'updateSearch' ? 'input' : 'change', () => { limit = 12; render(); });
+  $('resetUpdates').onclick=()=>{for(const id of ['updateSearch','updateTopic','updateSource','updateAge'])$(id).value='';limit=12;render();};
   $('moreUpdates').onclick = () => { limit += 12; render(); };
   $('refreshUpdates').onclick = refresh;
   setInterval(() => { if (!document.hidden) refresh(); }, 300000);

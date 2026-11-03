@@ -1,5 +1,11 @@
 # Field Ledger: dated agriculture updates
 
+## Beta repair checks
+
+The public-beta repair pass adds input validation for resources and cached feed data, timeout-bounded content loading, immediately available original research, editor draft recovery, protection against late initial loads overwriting edits, named reading dialogs, keyboard focus restoration and safer video links. Invalid imported records are rejected rather than published. Added editor entries are saved in browser storage when available; unfinished form text is not autosaved. Use a downloaded backup before changing devices.
+
+Run `npm ci`, `npm test` and `npm run check:accessibility` with Node 24.15 or newer in the 24.x line. The regression suite uses simulated failures, not load against production publishers. The accessibility script excludes contrast checks because it runs without a layout engine; a passing run is not a complete accessibility certification.
+
 ## What runs automatically
 
 The page calls `/api/updates` on opening and every five minutes while visible. The server fetches seven named publisher feeds concurrently, with a 6.5-second timeout per source and a 1.5 MB response limit. A five-minute process cache and up to two minutes of edge caching reduce publisher requests. Publication-to-display latency also depends on publisher RSS schedules. This is near-live monitoring, not an instant push stream.

@@ -1,6 +1,7 @@
 'use strict';
 const { getUpdates } = require('../lib/updates');
 module.exports = async function handler(req, res) {
+  res.setHeader('Allow', 'GET, HEAD');
   if (req.method !== 'GET' && req.method !== 'HEAD') return res.status(405).json({ error: 'GET required' });
   try {
     const data = await getUpdates();

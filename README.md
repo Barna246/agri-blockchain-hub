@@ -1,92 +1,25 @@
-# Field Ledger — Agriculture x Blockchain research site
+# Field Ledger public beta
 
-A static site (no build step, no dependencies) that turns the research base
-into a browsable, searchable, filterable reference. Deploys to Vercel as-is.
+Buildless smart agriculture research and learning hub on Vercel. Node 24.x is pinned. Vercel installs the lockfile dependencies; no frontend build command is required.
 
-## What's in here
+## Check changes
 
-- `index.html` — page structure
-- `styles.css` — all design
-- `data.js` — every research entry and the changelog. **This is the only file
-  you need to touch to update the site.**
-- `script.js` — reads `data.js` and renders the sidebar, cards, filters,
-  search, stats, and field log. You shouldn't need to edit this for routine
-  updates.
-- `research-notes.md` — the full research doc, linked as a download from the
-  sidebar.
-- `scripts/` — finished video scripts, one file per episode. Each one gets
-  a matching entry in `data.js` under the "scripts" category, with a `link`
-  field pointing at the file. This is the log Sir Barna asked for: every
-  produced script lives here, filterable and linked from the ledger.
-- `api/live-data.js` — a Vercel Serverless Function that pulls live data on
-  a schedule (see "Field sensors" below).
-- `live.js` — fetches `/api/live-data` on page load and renders it into the
-  "Field sensors" panels.
+Use Node 24.15 or newer in the 24.x line:
 
-## Field sensors (live data)
+    npm ci
+    npm test
+    npm run check:accessibility
 
-The site pulls four live feeds through one serverless function:
+The 33 tests simulate feed failures, malformed data, unsafe links, concurrency, blocked storage and slow content loading. They do not send load-test traffic to publishers. DOM accessibility checks exclude contrast and do not replace real screen-reader/device testing.
 
-- **Crypto & carbon tokens** — SOL, KLIMA, NCT, REGEN prices via CoinGecko's
-  free public API (no key required).
-- **Agribusiness stocks & ETFs** — Deere, ADM, Bunge, Corteva, Nutrien,
-  Mosaic, plus agri-commodity ETFs (DBA, WEAT, CORN, SOYB) via Stooq's free
-  quote endpoint (no key required).
-- **AgTech headlines** — latest posts from AgFunderNews and AGDAILY via RSS.
+## Add research
 
-None of this needs an API key or a database. The function fetches fresh data
-when called, but the response is edge-cached by Vercel for 30 minutes
-(`stale-while-revalidate` for another hour), so visitors get a fast cached
-read and the underlying free APIs never see per-visitor traffic. That cache
-window is what makes it "update per time" rather than genuinely per-request.
+Original research is in data.js; new entries are in content.json. The resource editor loads published entries before enabling add/export and validates imported files. Added entries save in this browser when storage permits. Unfinished form text is not autosaved. Download a backup before publishing. Import the latest content.json when returning to an old draft after changes elsewhere.
 
-**Honest caveat:** I built and syntax-checked this function, and confirmed
-each API endpoint is real and currently free/keyless via documentation —
-but my sandbox can't reach these external APIs directly, so I couldn't
-execute a live end-to-end test before the first deploy. If a panel ever
-shows "unavailable," it's designed to fail gracefully rather than break
-the page. Flag anything that looks off after a deploy and I'll fix it.
+The editor cannot change the server by itself. Publish the exported content.json through your GitHub/Vercel workflow. Bookmarks are browser-local and do not sync across devices.
 
-**If you later want a CoinGecko Demo API key** (raises the crypto panel's
-rate limit from ~10/min to 30/min — unnecessary at this traffic level, but
-free to add), set `COINGECKO_API_KEY` as an environment variable in the
-Vercel project settings. The function already checks for it automatically.
+## Feeds
 
-## Deploy to Vercel (pick one)
+Read UPDATES-GUIDE.md. sources.json defines the publisher directory; reviewed-updates.json contains editorial references. Polling is demand-driven with shared caching, not instant push or a permanent archive. No AI API is used for routine updates. Dates and source health are shown separately.
 
-**Fastest — no account setup beyond Vercel itself:**
-1. Go to vercel.com and sign in (GitHub, GitLab, or email).
-2. Click **Add New → Project**, then look for the **"deploy without Git"**
-   / drag-and-drop option and drop this whole folder in.
-3. Vercel auto-detects it as a static site — no framework, no build command,
-   no environment variables needed. Deploy.
-
-**Best for ongoing updates — connect a GitHub repo:**
-1. Create a new GitHub repo and push this folder to it.
-2. In Vercel, **Add New → Project → Import Git Repository**, pick the repo.
-3. Every time the repo's `main` branch is updated, Vercel redeploys
-   automatically. If you connect GitHub in a future session, I can push
-   updates straight to that repo instead of you re-uploading a zip each time.
-
-**Command line, if you have Node/npm installed locally:**
-```
-npm i -g vercel
-cd agri-blockchain-hub
-vercel
-```
-Follow the prompts; no configuration needed.
-
-## How updates will work going forward
-
-Each time you send new research, I'll add entries to `data.js` (and a line
-to the `changelog` array at the bottom of that file) and hand you back the
-updated folder. My work environment doesn't persist between conversations,
-so either:
-
-- re-upload this folder (or just `data.js`) next time and I'll edit it and
-  hand back the update, or
-- connect a GitHub repo once, and I can push updates to it directly in future
-  sessions — then Vercel redeploys on its own.
-
-Either way, nothing about the design or the deploy process changes — you're
-only ever updating one data file.
+Historical claims still need a citation/date review before broad promotion. The beta repair pass preserves the original research and adds resilient loading, data validation, draft recovery, safer watch rendering, reading-dialog labels, keyboard focus return and mobile layout fixes.
